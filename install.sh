@@ -179,6 +179,8 @@ then
     echo "Installing MongoDB"
     echo
     yay -S mongodb-bin -y
+    echo "Setting up MongoDB"
+    echo
     sudo systemctl start mongodb
     sudo systemctl status mongodb
     sudo systemctl enable mongodbi
