@@ -79,7 +79,7 @@ echo
 # Install customizing programs
 echo "Installing customizing programs..."
 echo
-sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum papirus-icon-theme -y
+sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct breeze breeze-gtk -y
 # This to fix qt5ct not working
 echo 'export QT_QPA_PLATFORMTHEME="qt5ct"' > ~/.profile
 echo
