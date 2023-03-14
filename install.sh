@@ -55,6 +55,9 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 echo
+# Change back to directories to go back to base foler
+cd ..
+cd ..
 
 # Activate the paccache timer to clean package cache 
 echo
