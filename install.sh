@@ -146,7 +146,7 @@ then
         # Install bluetooth
         echo "Installing bluetooth..."
         echo
-        sudo pacman -S bluez bluez-utils bluez-libs
+        sudo pacman -S blueman bluez bluez-utils bluez-libs
         # Enable bluetooth
         sudo systemctl enable bluetooth
         echo
