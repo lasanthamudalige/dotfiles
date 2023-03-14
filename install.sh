@@ -22,31 +22,31 @@ sudo cp -r kitty/ ~/.config
 echo
 
 # Move picom folder to "~/.config/" folder or create a folder and move that file
-echo "Coving picom folder..."
+echo "Copying picom folder..."
 echo
 sudo cp -r picom/ ~/.config
 echo
 
 # Move ranger to "~/.config/" folder or create a folder and move that file
-echo "Coving Ranger folder..."
+echo "Copying Ranger folder..."
 echo
 sudo cp -r ranger/ ~/.config
 echo
 
 # Move rofi folder to "~/.config/" folder or create a folder and move that file
-echo "Coving Rofi folder..."
+echo "Copying Rofi folder..."
 echo
 sudo cp -r rofi/ ~/.config
 echo
 
 # Install essential apps
-echo "Installing essential apps"
+echo "Installing essential apps..."
 echo
 sudo pacman -S pacman-contrib xdg-user-dirs ufw -y
 echo
 
 # Install yay aur helper
-echo "Installing aur helper"
+echo "Installing aur helper..."
 echo
 sudo pacman -S --needed base-devel git 
 mkdir Programs
@@ -62,14 +62,14 @@ sudo systemctl enable paccache.timer
 echo
 
 # Run xdg-user-dirs to create user direcotries
-echo "Creating user directories"
+echo "Creating user directories..."
 echo
 xdg-user-dirs-update
 echo
 
 # Setup firewall
 # Enable UFW
-echo "Setting up firewall"
+echo "Setting up firewall..."
 echo
 sudo ufw enable
 # Check status
@@ -90,13 +90,13 @@ read TYPE
 if [$TYPE == "1"]
 then
     # Install other programs
-    echo "Installing other programs"
+    echo "Installing other programs..."
     echo
     sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh -y # or libreoffice-still for stable version
     echo
 
     # This is to backlight program to work
-    echo "Setting up backlight adjustment program"
+    echo "Setting up backlight adjustment program..."
     echo "Enter your username:"
     read USERNAME
 
@@ -104,12 +104,12 @@ then
     echo
 
     # Enable bluetooth
-    echo "Enabling bluetooth"
+    echo "Enabling bluetooth..."
     sudo systemctl enable bluetooth
     echo
 
     # Enable TLP and setting up
-    echo "Setting up TLP"
+    echo "Setting up TLP..."
     sudo systemctl enable tlp.service
 
     sudo systemctl enable NetworkManager-dispatcher.service
@@ -118,15 +118,17 @@ then
     echo
 
     # Add touchpad tap and and right click with three fingers"
-    echo "Setting up touchpad"
+    echo "Setting up touchpad..."
     sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
     echo
 
 elif [$TYPE == "2"]
 then
     # Installing other programs
+    echo "Installing other programs..."
+    echo
     sudo pacman -S rofi neofetch ntfs-3g xss-lock pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad ibreoffice-fresh -y # or libreoffice-still for stable version
-
+	echo
     # Install bluetooth if the user want
     echo "Install bluetooth (y/n):"
     read INSTALL
@@ -134,9 +136,11 @@ then
     if [$INSTALL == "y"]
     then
         # Install bluetooth
+        echo "Installing bluetooth..."
         sudo pacman -S bluez bluez-utils bluez-libs
         # Enable bluetooth
         sudo systemctl enable bluetooth
+        echo
     fi  
 fi
 echo
@@ -146,6 +150,7 @@ yay -S autotiling -y
 echo
 echo "Install programming stuff? (y/n):"
 read RESPONSE
+
 if  [$RESPONSE == "y"]  
 then 
     # Install fish shell
