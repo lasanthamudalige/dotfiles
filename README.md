@@ -210,6 +210,16 @@ yay -S google-chrome visual-studio-code-bin -y
     ```
     
     - add a new password for the keyring
+    
+### Install spotify
+```
+sudo pacman -S spotify-launcher
+```
+
+### Install postman
+```
+yay -S postman
+```
 
 ### Install programming stuff
   
