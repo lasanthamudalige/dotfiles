@@ -211,11 +211,10 @@ yay -S google-chrome visual-studio-code-bin -y
     
     - add a new password for the keyring
     
-### Install spotify tui
+### Install spotify
 ```
-yay -S spotify-tui
+yay -S spotify-launcher
 ```
-***Read [this](https://github.com/Rigellute/spotify-tui#connecting-to-spotifys-api) documentation to set it up***
 
 ### Install postman
 ```
