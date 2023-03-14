@@ -185,7 +185,7 @@ then
     echo
     sudo systemctl start mongodb
     sudo systemctl status mongodb
-    sudo systemctl enable mongodbi
+    sudo systemctl enable mongodb
     mongod --version
 
     echo "Generating github ssh and installing nvm"
