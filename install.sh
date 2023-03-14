@@ -106,11 +106,13 @@ then
 
     # Enable bluetooth
     echo "Enabling bluetooth..."
+    echo
     sudo systemctl enable bluetooth
     echo
 
     # Enable TLP and setting up
     echo "Setting up TLP..."
+    echo
     sudo systemctl enable tlp.service
 
     sudo systemctl enable NetworkManager-dispatcher.service
@@ -138,6 +140,7 @@ then
     then
         # Install bluetooth
         echo "Installing bluetooth..."
+        echo
         sudo pacman -S bluez bluez-utils bluez-libs
         # Enable bluetooth
         sudo systemctl enable bluetooth
