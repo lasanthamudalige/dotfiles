@@ -1,8 +1,3 @@
-# Install nvm before asking for root permission
-echo "Installing nvm"
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
-echo
-
 # Move "i3" config file to "~/.config"
 echo "Copying i3 folder..."
 echo
