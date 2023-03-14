@@ -166,7 +166,7 @@ then
     yay -S google-chrome visual-studio-code-bin -y
     echo
 
-    Install needed python packages 
+    # Install needed python packages 
     echo "Installing Python-tk and pip package manager"
     echo
     sudo pacman -S python tk python-pip # python-tk python-pip packages
@@ -183,7 +183,7 @@ then
 
     echo "Generating github ssh and installing nvm"
     echo
-    dirname/new_github_ssh_and_nvm_install.sh
+    sh ./new_github_ssh_and_nvm_install.sh
     echo
 fi
 
