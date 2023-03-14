@@ -154,7 +154,7 @@ then
 fi
 echo
 # Install autotiling for i3
-echo "Install autotiling..."
+echo "Installing autotiling..."
 yay -S autotiling -y
 echo
 echo "Install programming stuff? (y/n):"
@@ -163,35 +163,35 @@ read RESPONSE
 if  [ "$RESPONSE" == "y" ];  
 then 
     # Install fish shell
-    echo "Installing fish shell"
+    echo "Installing fish shell..."
     echo
     sudo pacman -S fish
     echo 
 
     # Install google chrome and vs code
-    echo "Installing chrome and vs code"
+    echo "Installing chrome and vs code..."
     echo
     yay -S google-chrome visual-studio-code-bin -y
     echo
 
     # Install needed python packages 
-    echo "Installing Python-tk and pip package manager"
+    echo "Installing Python-tk and pip package manager..."
     echo
     sudo pacman -S python tk python-pip # python-tk python-pip packages
     echo 
 
     # Install mogodb and enable autostart on boot
-    echo "Installing MongoDB"
+    echo "Installing MongoDB..."
     echo
     yay -S mongodb-bin -y
-    echo "Setting up MongoDB"
+    echo "Setting up MongoDB..."
     echo
     sudo systemctl start mongodb
     sudo systemctl status mongodb
     sudo systemctl enable mongodb
     mongod --version
 
-    echo "Generating github ssh and installing nvm"
+    echo "Generating github ssh and installing nvm..."
     echo
     BASEDIR=$(cd $(dirname $0) && pwd)
     $BASEDIR/new_github_ssh_and_nvm_install.sh
