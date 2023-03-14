@@ -98,6 +98,7 @@ then
 
     # This is to backlight program to work
     echo "Setting up backlight adjustment program..."
+    echo
     echo "Enter your username:"
     read USERNAME
 
@@ -122,6 +123,7 @@ then
 
     # Add touchpad tap and and right click with three fingers"
     echo "Setting up touchpad..."
+    echo
     sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
     echo
 
