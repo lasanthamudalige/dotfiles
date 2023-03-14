@@ -79,6 +79,7 @@ sudo systemctl enable ufw.service
 echo
 
 # Install customizing programs
+echo "Installing customizing programs..."
 echo
 sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct gnome-themes-extra kvantum papirus-icon-theme -y
 # This to fix qt5ct not working
@@ -87,7 +88,7 @@ echo
 
 echo "Laptop or a desktop (Enter 1 or 2):"
 read TYPE
-if [$TYPE == "1"]
+if [ "$TYPE" == "1" ];
 then
     # Install other programs
     echo "Installing other programs..."
@@ -122,7 +123,7 @@ then
     sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
     echo
 
-elif [$TYPE == "2"]
+elif [ "$TYPE" == "2" ];
 then
     # Installing other programs
     echo "Installing other programs..."
@@ -133,7 +134,7 @@ then
     echo "Install bluetooth (y/n):"
     read INSTALL
 
-    if [$INSTALL == "y"]
+    if [ "$INSTALL" == "y" ];
     then
         # Install bluetooth
         echo "Installing bluetooth..."
@@ -151,7 +152,7 @@ echo
 echo "Install programming stuff? (y/n):"
 read RESPONSE
 
-if  [$RESPONSE == "y"]  
+if  [ "$RESPONSE" == "y" ];  
 then 
     # Install fish shell
     echo "Installing fish shell"
@@ -182,7 +183,7 @@ then
 
     echo "Generating github ssh and installing nvm"
     echo
-    ./new_github_ssh_and_nvm_install.sh
+    dirname/new_github_ssh_and_nvm_install.sh
     echo
 fi
 
