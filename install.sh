@@ -190,7 +190,8 @@ then
 
     echo "Generating github ssh and installing nvm"
     echo
-    sh ./new_github_ssh_and_nvm_install.sh
+    BASEDIR=$(cd $(dirname $0) && pwd)
+    $BASEDIR/new_github_ssh_and_nvm_install.sh
     echo
 fi
 
