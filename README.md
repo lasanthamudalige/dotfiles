@@ -287,6 +287,12 @@ yay -S postman
         mongod --version
         ```
 
+- Other programs
+    ```
+    yay -S termdown # commandline countdown program
+    yay -S devtodo # commandline todo list
+    ```
+
 ## Screenshots
 
 ![2023-03-13_21-24](https://user-images.githubusercontent.com/91461938/224756323-57b53b92-5525-4d4e-8bd6-cae8cb69bb1f.png)
