@@ -211,7 +211,7 @@ yay -S google-chrome visual-studio-code-bin -y
     
     - add a new password for the keyring
     
-### Install spotify
+### ~~Install spotify~~ (Install commandline one below)
 ```
 yay -S spotify-launcher
 ```
