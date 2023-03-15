@@ -291,6 +291,7 @@ yay -S postman
     ```
     yay -S termdown # commandline countdown program
     yay -S devtodo # commandline todo list
+    sudo pacman -S calc # commandline calculator
     ```
 
 ## Screenshots
