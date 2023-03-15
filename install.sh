@@ -46,6 +46,12 @@ echo
 sudo cp -r ncspot/ ~/.config
 echo
 
+# Move wallpapers folder to "~/Pictures" folder or create a folder and move that file
+echo "Copying wallpapers folder..."
+echo
+sudo cp -r wallpapers/ ~/Pictures
+echo
+
 # Install essential apps
 echo "Installing essential apps..."
 echo
