@@ -34,6 +34,18 @@ echo
 sudo cp -r rofi/ ~/.config
 echo
 
+# Move dunst folder to "~/.config/" folder or create a folder and move that file
+echo "Copying dunst folder..."
+echo
+sudo cp -r dunst/ ~/.config
+echo
+
+# Move ncspot folder to "~/.config/" folder or create a folder and move that file
+echo "Copying ncspot folder..."
+echo
+sudo cp -r ncspot/ ~/.config
+echo
+
 # Install essential apps
 echo "Installing essential apps..."
 echo
