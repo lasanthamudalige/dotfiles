@@ -185,6 +185,7 @@ then
     echo "Installing chrome and vs code..."
     echo
     yay -S google-chrome visual-studio-code-bin -y
+    sudo pacman -S gnome-keyring -y
     echo
 
     # Install needed python packages 
