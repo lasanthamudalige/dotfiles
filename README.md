@@ -206,7 +206,7 @@ yay -S google-chrome visual-studio-code-bin -y
 
   - ***To fix visual code code not saving login info install***
     ```
-    sudo pacman -S gnome-keyring libsecret libgnome-keyring
+    sudo pacman -S gnome-keyring
     ```
     
     - add a new password for the keyring
