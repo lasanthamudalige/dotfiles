@@ -220,7 +220,7 @@ yay -S spotify-launcher
 
 ### Install postman
 ```
-yay -S postman
+yay -S postman-bin
 ```
 
 ### Install programming stuff
