@@ -1,4 +1,4 @@
-# Move "i3" config file to "~/.config"
+# Move "i3" config folder to "~/.config"
 echo "Copying i3 folder..."
 echo
 sudo cp -r i3/ ~/.config/
@@ -109,7 +109,7 @@ then
     # Install other programs
     echo "Installing other programs..."
     echo
-    sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs dunst pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh -y # or libreoffice-still for stable version
+    sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs dunst pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad spotify-launcher tlp tlp-rdw libreoffice-fresh -y # or libreoffice-still for stable version
     echo
 
     # This is to backlight program to work
@@ -148,7 +148,7 @@ then
     # Installing other programs
     echo "Installing other programs..."
     echo
-    sudo pacman -S rofi neofetch ntfs-3g xss-lock dunst pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad ibreoffice-fresh -y # or libreoffice-still for stable version
+    sudo pacman -S rofi neofetch ntfs-3g xss-lock dunst pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad spotify-launcher ibreoffice-fresh -y # or libreoffice-still for stable version
 	echo
     # Install bluetooth if the user want
     echo "Install bluetooth (y/n):"
@@ -185,7 +185,8 @@ then
     echo "Installing chrome and vs code..."
     echo
     yay -S google-chrome visual-studio-code-bin -y
-    sudo pacman -S gnome-keyring -y
+    # Install brave browser and gnome-keyring to vs code
+    sudo pacman -S brave-browser gnome-keyring -y
     echo
 
     # Install needed python packages 

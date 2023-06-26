@@ -216,7 +216,7 @@ yay -S google-chrome visual-studio-code-bin -y
 yay -S spotify-launcher
 ```
 
-***More spotify thirdparty player [here](https://wiki.archlinux.org/title/Spotify)***
+***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
 
 ### Install postman
 ```
