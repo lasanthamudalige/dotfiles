@@ -175,18 +175,18 @@ read RESPONSE
 
 if  [ "$RESPONSE" == "y" ];  
 then 
-    # Install fish shell
-    echo "Installing fish shell..."
+    # Install fish shell and  brave browser
+    echo "Installing fish shell & brave browser..."
     echo
-    sudo pacman -S fish
+    sudo pacman -S fish brave-browser
     echo 
 
     # Install google chrome and vs code
     echo "Installing chrome and vs code..."
     echo
     yay -S google-chrome visual-studio-code-bin -y
-    # Install brave browser and gnome-keyring to vs code
-    sudo pacman -S brave-browser gnome-keyring -y
+    # Install gnome-keyring to vs code
+    sudo pacman -S gnome-keyring -y
     echo
 
     # Install needed python packages 
