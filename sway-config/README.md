@@ -32,7 +32,7 @@
   
     - Install all  essential programs using:
       ```
-      sudo pacman -S pacman-contrib xdg-user-dirs ufw --nedded
+      sudo pacman -S pacman-contrib xdg-user-dirs ufw --needed
       ```
     - Install yay aur helper
       ```
@@ -111,7 +111,7 @@
     
     - Install cutomizing programs
       ```
-      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code --nedded
+      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code --needed
       ```
 
 5. Install necessary applications 
@@ -120,7 +120,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh --nedded # or libreoffice-still for stable version
+       sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh --needed # or libreoffice-still for stable version
        ```
        
      - Enable bluetooth
@@ -147,11 +147,11 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad libreoffice-fresh --nedded # or libreoffice-still for stable version
+       sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad libreoffice-fresh --needed # or libreoffice-still for stable version
        ```
       - Install bluetooth
           ```
-          sudo pacman -S blueman bluez bluez-utils bluez-libs
+          sudo pacman -S blueman bluez bluez-utils bluez-libs --needed
           ```
       
           - Enable bluetooth
