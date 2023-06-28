@@ -130,7 +130,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh --needed # or libreoffice-still for stable version
+       sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad tlp tlp-rdw libreoffice-fresh --needed # or libreoffice-still for stable version
        ```
        
      - Enable bluetooth
@@ -157,7 +157,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad libreoffice-fresh --needed # or libreoffice-still for stable version
+       sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh --needed # or libreoffice-still for stable version
        ```
       - Install bluetooth
           ```
