@@ -108,6 +108,16 @@
           ```
 
 4. Customizing sway setup
+
+    - Install Ly login manager
+      ```
+      sudo pacman -S ly --needed
+      ```
+
+        - Enable the service
+          ```
+          sudo systemctl enable ly.service
+          ```
     
     - Install cutomizing programs
       ```

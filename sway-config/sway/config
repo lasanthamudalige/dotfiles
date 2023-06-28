@@ -27,7 +27,7 @@ set $menu exec wofi --show=drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/wallpapers/pr5ded8pqr0b1.png fill
 #
 # Example configuration:
 #
@@ -51,11 +51,10 @@ output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 exec swayidle -w \
 	timeout 900 'swaylock -f -c 000000' \
 	timeout 905 'swaymsg "output * power off"' \
-	resume 'swaymsg "output * power on"'
-
-    # Pause and media before suspend 
-    before-sleep 'playerctl pause'
-    before-sleep 'swaylock -c 000000'
+	resume 'swaymsg "output * power on"'\
+    before-sleep 'playerctl pause'\
+    before-sleep 'swaylock -c 000000'\
+    # Pause and media before suspend (above before-sleep)
 
 ### Input configuration
 #
@@ -258,5 +257,14 @@ exec --no-startup-id nm-applet
 
 # Start clipman with sway
 exec wl-paste -t text --watch clipman store --no-persist
+
+# Start redshift with current location mozila location service
+exec --no-startup-id  redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | awk 'OFS=":" {print $3,$5}' | tr -d ',}')
+
+# screenshots using flameshot
+# start program at the start
+#exec --no-startup-id flameshot
+# key combination to take screenshots
+bindsym Print exec "flameshot gui"
 
 include @sysconfdir@/sway/config.d/*

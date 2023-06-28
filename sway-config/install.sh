@@ -1,7 +1,7 @@
 # Install essential apps
 echo "Installing essential apps..."
 echo
-sudo pacman -S pacman-contrib xdg-user-dirs ufw --nedded -y
+sudo pacman -S pacman-contrib xdg-user-dirs ufw --needed -y
 echo
 
 # Install yay aur helper
@@ -43,7 +43,11 @@ echo
 # Install customizing programs
 echo "Installing customizing programs..."
 echo
-sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code -y
+sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code ly --needed -y
+echo
+echo "Enabling Ly login"
+sudo systemctl enable ly.service
+echo
 
 # Copy "sway" config folder to "~/.config" folder or create a folder and copy that file into it
 echo "Copying sway folder..."
@@ -88,7 +92,7 @@ then
     # Install other programs
     echo "Installing other programs..."
     echo
-    sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh --nedded -y # or libreoffice-still for stable version
+    sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh --needed -y # or libreoffice-still for stable version
     echo
 
     # Enable bluetooth
@@ -112,7 +116,7 @@ then
     # Installing other programs
     echo "Installing other programs..."
     echo
-    sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad libreoffice-fresh --nedded -y # or libreoffice-still for stable version
+    sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad libreoffice-fresh --needed -y # or libreoffice-still for stable version
 	echo
     # Install bluetooth if the user want
     echo "Install bluetooth (y/n):"
@@ -138,7 +142,7 @@ then
     # Install fish shell and  brave browser
     echo "Installing fish shell & brave browser..."
     echo
-    sudo pacman -S fish brave-browser --nedded -y
+    sudo pacman -S fish brave-browser --needed -y
     echo 
 
     # Install google chrome and vs code
@@ -146,19 +150,19 @@ then
     echo
     yay -S google-chrome visual-studio-code-bin -y
     # Install gnome-keyring to vs code
-    sudo pacman -S gnome-keyring --nedded -y
+    sudo pacman -S gnome-keyring --needed -y
     echo
 
     # Install needed python packages 
     echo "Installing Python-tk and pip package manager..."
     echo
-    sudo pacman -S python tk python-pip --nedded -y # python-tk python-pip packages
+    sudo pacman -S python tk python-pip --needed -y # python-tk python-pip packages
     echo 
 
     # Install mogodb and enable autostart on boot
     echo "Installing MongoDB..."
     echo
-    yay -S mongodb-bin --nedded -y
+    yay -S mongodb-bin --needed -y
     echo "Setting up MongoDB..."
     echo
     sudo systemctl start mongodb
