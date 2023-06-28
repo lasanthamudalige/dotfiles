@@ -1,57 +1,3 @@
-# Move "i3" config folder to "~/.config"
-echo "Copying i3 folder..."
-echo
-sudo cp -r i3/ ~/.config/
-echo
-
-# Move "i3status.conf" to "/etc" folder
-echo "Moving i3status.conf..."
-echo
-sudo mv i3status.conf /etc/
-echo
-
-# Move kitty folder to "~/.config/" folder or create a folder and move that file
-echo "Copying kitty folder..."
-echo
-sudo cp -r kitty/ ~/.config
-echo
-
-# Move picom folder to "~/.config/" folder or create a folder and move that file
-echo "Copying picom folder..."
-echo
-sudo cp -r picom/ ~/.config
-echo
-
-# Move ranger to "~/.config/" folder or create a folder and move that file
-echo "Copying Ranger folder..."
-echo
-sudo cp -r ranger/ ~/.config
-echo
-
-# Move rofi folder to "~/.config/" folder or create a folder and move that file
-echo "Copying Rofi folder..."
-echo
-sudo cp -r rofi/ ~/.config
-echo
-
-# Move dunst folder to "~/.config/" folder or create a folder and move that file
-echo "Copying dunst folder..."
-echo
-sudo cp -r dunst/ ~/.config
-echo
-
-# Move ncspot folder to "~/.config/" folder or create a folder and move that file
-echo "Copying ncspot folder..."
-echo
-sudo cp -r ncspot/ ~/.config
-echo
-
-# Move wallpapers folder to "~/Pictures" folder or create a folder and move that file
-echo "Copying wallpapers folder..."
-echo
-sudo cp -r wallpapers/ ~/Pictures
-echo
-
 # Install essential apps
 echo "Installing essential apps..."
 echo
@@ -97,9 +43,42 @@ echo
 # Install customizing programs
 echo "Installing customizing programs..."
 echo
-sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct breeze breeze-gtk -y
-# This to fix qt5ct not working
-echo 'export QT_QPA_PLATFORMTHEME="qt5ct"' > ~/.profile
+sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code -y
+
+# Copy "sway" config folder to "~/.config" folder or create a folder and copy that file into it
+echo "Copying sway folder..."
+echo
+sudo cp -r sway/ ~/.config/
+echo
+
+# Copy "i3status.conf" to "~/.config" folder or create a folder and copy that file into it
+echo "Moving i3status folder..."
+echo
+sudo cp -r i3status/ ~/.config/
+echo
+
+# Copy "kitty" folder to "~/.config/" folder or create a folder and copy that file into it
+echo "Copying kitty folder..."
+echo
+sudo cp -r kitty/ ~/.config/
+echo
+
+# Copy "ranger" to "~/.config/" folder or create a folder and copy that file into it
+echo "Copying Ranger folder..."
+echo
+sudo cp -r ranger/ ~/.config/
+echo
+
+# Copy dunst folder to "~/.config/" folder or create a folder and copy that file into it
+echo "Copying dunst folder..."
+echo
+sudo cp -r dunst/ ~/.config/
+echo
+
+# Copy wallpapers folder to "~/Pictures" folder or create a folder and copy that file into it
+echo "Copying wallpapers folder..."
+echo
+sudo cp -r wallpapers/ ~/Pictures/
 echo
 
 echo "Laptop or a desktop (Enter 1 or 2):"
@@ -109,16 +88,7 @@ then
     # Install other programs
     echo "Installing other programs..."
     echo
-    sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs dunst pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad spotify-launcher tlp tlp-rdw libreoffice-fresh -y # or libreoffice-still for stable version
-    echo
-
-    # This is to backlight program to work
-    echo "Setting up backlight adjustment program..."
-    echo
-    echo "Enter your username:"
-    read USERNAME
-
-    sudo usermod -aG video $USERNAME
+    sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh # or libreoffice-still for stable version
     echo
 
     # Enable bluetooth
@@ -137,18 +107,12 @@ then
     sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket  
     echo
 
-    # Add touchpad tap and and right click with three fingers"
-    echo "Setting up touchpad..."
-    echo
-    sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
-    echo
-
 elif [ "$TYPE" == "2" ];
 then
     # Installing other programs
     echo "Installing other programs..."
     echo
-    sudo pacman -S rofi neofetch ntfs-3g xss-lock dunst pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad spotify-launcher ibreoffice-fresh -y # or libreoffice-still for stable version
+    sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh # or libreoffice-still for stable version
 	echo
     # Install bluetooth if the user want
     echo "Install bluetooth (y/n):"
@@ -165,11 +129,7 @@ then
         echo
     fi  
 fi
-echo
-# Install autotiling for i3
-echo "Installing autotiling..."
-yay -S autotiling -y
-echo
+
 echo "Install programming stuff? (y/n):"
 read RESPONSE
 
@@ -182,7 +142,7 @@ then
     echo 
 
     # Install google chrome and vs code
-    echo "Installing chrome and vs code..."
+    echo "Installing google chrome and vs code..."
     echo
     yay -S google-chrome visual-studio-code-bin -y
     # Install gnome-keyring to vs code

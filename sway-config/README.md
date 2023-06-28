@@ -9,9 +9,9 @@
 ## Arch install summery
 
 ***I installed it using archinstall***
-  - Disk partition - ext4 with 2 partition with encryption
-  - profile - desktop with i3-gaps
-  - Sound - pulseaudio
+  - Disk partition - ext4 with 1 partition with encryption
+  - profile - Desktop with Sway
+  - Sound - Pipewire
   - kernel - LTS kernel
   - Additional packages - 'firefox' 'kitty' 'git'
   - Network configuration - NetworkManager
@@ -25,41 +25,10 @@
   
 1. Clone the repo
   ```
-  git clone https://github.com/lasanthamudalige/my-arch-setup.git
+  git clone https://github.com/lasanthamudalige/dotfiles.git
   ```
-2. Move config files
-
-    - Move i3 folder to "~/.config" folder
-      ```
-      sudo mv i3/ ~/.config/
-      ```
-      
-    - Move i3status.conf to "/etc" folder
-      ```
-      sudo mv i3status.conf /etc/
-      ```
-        
-     - Move kitty folder to "~/.config" folder
-       ```
-       sudo mv kitty/ ~/.config/
-       ```
-     
-     - Move picom folder to "~/.config" folder
-        ```
-        sudo mv picom/ ~/.config/
-        ```
-        
-     - Move ranger folder to "~/.config" folder
-        ```
-        sudo mv ranger/ ~/.config/
-        ```
-        
-     - Move rofi folder to "~/.config" folder
-        ```
-        sudo mv rofi/ ~/.config/
-        ```
                
-3. Do essential things
+2. Do essential things
   
     - Install all  essential programs using:
       ```
@@ -111,17 +80,39 @@
         sudo systemctl enable ufw.service
         ```
 
-4. Customizing i3 setup
+3. Move config files
+
+    - Move sway folder to "~/.config" folder
+      ```
+      sudo mv sway/ ~/.config/
+      ```
+      
+    - Move i3status folder to "~/.config" folder
+      ```
+      sudo mv i3status/ ~/.config/
+      ```
+        
+     - Move kitty folder to "~/.config" folder
+       ```
+       sudo mv kitty/ ~/.config/
+       ```
+        
+     - Move ranger folder to "~/.config" folder
+        ```
+        sudo mv ranger/ ~/.config/
+        ```
+    
+      - Move wallpapers folder to "~/.config" folder
+          ```
+          sudo mv wallpapers/ ~/Pictures/
+          ```
+
+4. Customizing sway setup
     
     - Install cutomizing programs
       ```
-      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code nitrogen picom lxappearance qt5ct breeze breeze-gtk
+      sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
       ```
-    - ***If there is a configure error like "The QT_QPA_PLATFORMTHEME environment variable is not set (required value: qt5ct)"***
-      - create a ".profile" file in home directory and add "export QT_QPA_PLATFORMTHEME="qt5ct" line to it using
-          ```
-          echo 'export QT_QPA_PLATFORMTHEME="qt5ct"' > ~/.profile
-          ```
 
 5. Install necessary applications 
      
@@ -129,11 +120,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S light rofi neofetch ntfs-3g xss-lock blueman bluez bluez-utils bluez-libs dunst pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh # or libreoffice-still for stable version
-       ```
-     - Run this command for backlight adjusment to work
-       ```
-       sudo usermod -aG video lasantha # Replace "lasantha" with your username
+       sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh # or libreoffice-still for stable version
        ```
        
      - Enable bluetooth
@@ -146,7 +133,7 @@
        sudo systemctl enable tlp.service
        ```
 
-     - tlp-rdw(Radio Device Wizard) need one more service enable it using
+     - tlp-rdw(Radio Device Wizard) it is required to use NetworkManager and enabling
        ```
         sudo systemctl enable NetworkManager-dispatcher.service
        ```
@@ -155,17 +142,12 @@
        ```
        sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
        ``` 
-       
-     - Move  "90-toucpad.conf" file to "xorg.conf.d" folder to eneble touchpad tap functions
-       ```
-       sudo cp 90-touchpad.conf /etc/X11/xorg.conf.d/
-       ```
      
    - ***For Desktops***
 
      - Install necessery programs using
        ```
-       sudo pacman -S rofi neofetch ntfs-3g xss-lock dunst pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman-plugin flameshot vlc transmission-gtk ristretto epdfview mousepad ibreoffice-fresh # or libreoffice-still for stable version
+       sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto epdfview mousepad tlp tlp-rdw libreoffice-fresh # or libreoffice-still for stable version
        ```
       - Install bluetooth
           ```
