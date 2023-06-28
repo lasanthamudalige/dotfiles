@@ -1,4 +1,4 @@
-# My arch i3wm setup
+# My arch sway wm setup
 
 ## Table of contents
 * [Arch install summery](#arch-install-summery)
@@ -158,14 +158,6 @@
               ```
               sudo systemctl enable bluetooth
               ```
-    
-   - ***For both***
-    
-      - Install Autotiling
-          ```
-          yay -S autotiling
-          ```
-      
        
 ## Other stuff
 
