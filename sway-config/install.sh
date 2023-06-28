@@ -52,7 +52,7 @@ sudo cp -r sway/ ~/.config/
 echo
 
 # Copy "i3status.conf" to "~/.config" folder or create a folder and copy that file into it
-echo "Moving i3status folder..."
+echo "Copying i3status folder..."
 echo
 sudo cp -r i3status/ ~/.config/
 echo
