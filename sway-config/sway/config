@@ -27,7 +27,9 @@ set $menu exec wofi --show=drun
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg ~/Pictures/wallpapers/pr5ded8pqr0b1.png fill
+#output * bg ~/Pictures/wallpapers/pr5ded8pqr0b1.png fill
+exec ~/.azotebg
+
 #
 # Example configuration:
 #
@@ -271,5 +273,10 @@ exec --no-startup-id  redshift -l $(curl -s "https://location.services.mozilla.c
 #exec --no-startup-id flameshot
 # key combination to take screenshots
 bindsym Print exec "flameshot gui"
+
+# start clipman on boot
+exec --no-startup-id xfce4-clipman
+# key combination to open clipboard
+bindsym $mod+c exec xfce4-popup-clipman
 
 include @sysconfdir@/sway/config.d/*

@@ -30,9 +30,9 @@
                
 2. Do essential things
   
-    - Install all  essential programs using:
+    - Install all essential Arch packages using:
       ```
-      sudo pacman -S pacman-contrib xdg-user-dirs ufw --needed
+      sudo pacman -S pacman-contrib xdg-user-dirs ufw wofi i3status swaybg dunst playerctl --needed
       ```
     - Install yay aur helper
       ```
@@ -42,6 +42,10 @@
       git clone https://aur.archlinux.org/yay.git
       cd yay
       makepkg -si
+      ```
+    - Install all essential AUR packages using:
+      ```
+      yay -S azote --needed #for wallpapers
       ```
     - Change pacman configuration
        - Open the config file
@@ -101,6 +105,11 @@
         ```
         sudo mv ranger/ ~/.config/
         ```
+      
+      - Move dunst folder to "~/.config" folder
+        ```
+        sudo mv dunst/ ~/.config/
+        ```
     
       - Move wallpapers folder to "~/.config" folder
           ```
@@ -130,7 +139,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S wofi i3status clipman swaybg blueman bluez bluez-utils bluez-libs dunst brightnessctl playerctl pcmanfm gvfs xarchiver zip unzip unrar ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad tlp tlp-rdw libreoffice-fresh --needed # or libreoffice-still for stable version
+       sudo pacman -S blueman bluez bluez-utils bluez-libs brightnessctl thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman flameshot vlc transmission-gtk ristretto mousepad tlp tlp-rdw libreoffice-fresh --needed # or libreoffice-still for stable version
        ```
        
      - Enable bluetooth
@@ -157,7 +166,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S wofi i3status clipman swaybg dunst brightnessctl playerctl thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh --needed # or libreoffice-still for stable version
+       sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh --needed # or libreoffice-still for stable version
        ```
       - Install bluetooth
           ```
