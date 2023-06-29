@@ -110,6 +110,11 @@
         ```
         sudo mv dunst/ ~/.config/
         ```
+
+      - Move wofi folder to "~/.config" folder
+        ```
+        sudo mv wofi/ ~/.config/
+        ```
     
       - Move wallpapers folder to "~/.config" folder
           ```
