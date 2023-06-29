@@ -274,9 +274,4 @@ exec --no-startup-id  redshift -l $(curl -s "https://location.services.mozilla.c
 # key combination to take screenshots
 bindsym Print exec "flameshot gui"
 
-# start clipman on boot
-exec --no-startup-id xfce4-clipman
-# key combination to open clipboard
-bindsym $mod+c exec xfce4-popup-clipman
-
 include @sysconfdir@/sway/config.d/*

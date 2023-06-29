@@ -45,7 +45,7 @@
       ```
     - Install all essential AUR packages using:
       ```
-      yay -S azote --needed #for wallpapers
+      yay -S azote clipman --needed #for wallpapers
       ```
     - Change pacman configuration
        - Open the config file
@@ -139,7 +139,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S blueman bluez bluez-utils bluez-libs brightnessctl thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman flameshot vlc transmission-gtk ristretto mousepad tlp tlp-rdw libreoffice-fresh --needed # or libreoffice-still for stable version
+       sudo pacman -S blueman bluez bluez-utils bluez-libs brightnessctl thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad tlp tlp-rdw libreoffice-fresh --needed # or libreoffice-still for stable version
        ```
        
      - Enable bluetooth
@@ -166,7 +166,7 @@
 
      - Install necessery programs using
        ```
-       sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji xfce4-clipman flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh --needed # or libreoffice-still for stable version
+       sudo pacman -S thunar gvfs thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler ranger atool ffmpegthumbnailer highlight libcaca mediainfo poppler transmission-cli w3m odt2txt redshift noto-fonts-emoji flameshot vlc transmission-gtk ristretto mousepad libreoffice-fresh --needed # or libreoffice-still for stable version
        ```
       - Install bluetooth
           ```
