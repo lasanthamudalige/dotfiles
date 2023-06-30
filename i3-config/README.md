@@ -25,7 +25,7 @@
   
 1. Clone the repo
   ```
-  git clone https://github.com/lasanthamudalige/my-arch-setup.git
+  git clone https://github.com/lasanthamudalige/dotfiles.git
   ```
 2. Move config files
 
