@@ -246,6 +246,24 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
 * Enable ufw from cli or gui
 
+	* Allow port 5331 in ufw for localsend
+
+   		```bash
+		sudo ufw allow 5331
+     	```
+
+   		* Show firewall status as numbered using:
+
+       		```bash
+			sudo ufw status numbered
+         	```
+        
+		* Remove the IPv6 rule
+
+			```bash
+			sudo udw delete NUM 
+   			```
+
 * Install previous mint-backgrounds
 
   ```bash
