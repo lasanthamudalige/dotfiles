@@ -246,6 +246,8 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
 * Enable ufw from cli or gui
 
+* Setup fingerprint using fingwit
+
 * Install previous mint-backgrounds
 
   ```bash

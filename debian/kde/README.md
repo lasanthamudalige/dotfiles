@@ -251,6 +251,8 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 	```
 	
 	* Enable ufw firewall from cli or gui
+	
+* Enable fingerprint in user settings
 
 ### Install MongoDB
 
