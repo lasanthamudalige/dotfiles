@@ -233,6 +233,14 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 		```bash
 		sudo apt install clangd
 		```
+  	* Install rust using this [link](https://rust-lang.org/tools/install/)
+
+	  * Install rust analyzer using rustup [more information](https://rust-analyzer.github.io/book/rust_analyzer_binary.html)
+ 		
+		```bash
+  		rustup component add rust-analyzer
+		```
+
 
 ### Custom tweaks
 
