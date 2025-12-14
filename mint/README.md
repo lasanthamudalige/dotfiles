@@ -246,8 +246,6 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
 * Enable ufw from cli or gui
 
-* Setup fingerprint using fingwit
-
 	* Allow port 5331 in ufw for localsend
 
    		```bash
@@ -265,6 +263,8 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 			```bash
 			sudo udw delete NUM # 2,3
    			```
+
+* Setup fingerprint using fingwit
 
 * Install previous mint-backgrounds
 

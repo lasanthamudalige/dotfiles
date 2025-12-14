@@ -251,8 +251,6 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 	```
 	
 	* Enable ufw firewall from cli or gui
-	
-* Enable fingerprint in user settings
 
 		* Allow port 5331 in ufw for localsend
 	
@@ -271,6 +269,8 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 				```bash
 				sudo udw delete NUM # 2,3
 	   			```
+				
+* Enable fingerprint in user settings
      
 ### Install MongoDB
 
