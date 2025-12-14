@@ -1,4 +1,4 @@
-# Debian Kde setup
+# Debian KDE setup
 
 ## Table of contents
 
@@ -9,88 +9,73 @@
 
 1. Clone the repo
 
-   <!-- This is how to properly declare code snippets  -->  
-    ```bash
-    git clone https://github.com/lasanthamudalige/setups
-    ```
+	<!-- This is how to properly declare code snippets  -->
+
+	```bash
+	git clone https://github.com/lasanthamudalige/setups
+	```
 
 2. Do essential things
 
-  * **Install debian [backports](https://www.cyberciti.biz/faq/install-enable-debian-linux-12-backports-repository/) if you need new programs.**
+* Install basic programs
 
-  * Install tlp and enable it
-  
-	- Install tlp
-  
-	  ```bash
-	  sudo apt install tlp tlp-rdw -y
-	  ```
-		
-		- For thinkpads
-			
-		  ```bash
-		  sudo apt install tp-smapi-dkms acpi-call-dkms -y
-		  ```
-			
-	- Enable tlp
-	
-	  ```bash
-	  sudo systemctl enable tlp.service
-	  ```
-	    
-	- Start tlp
-	
-	    ```bash
-	    sudo tlp start
-	    ```
+  ```bash
+  sudo apt install vim -y
+  ```
 
-* Install [deb-get](https://github.com/wimpysworld/deb-get) program
+* Change charge threshold to 80%(optional)
+
+  ```bash
+  vim /sys/class/power_supply/BAT0/
+  ```
+
+* Select charge_stop_threshold change it to 80
+
+* Install tlp(optional)
+
+* Install tlp
+
+     ```bash
+     sudo apt install tlp tlp-rdw -y
+     ```
+
+* Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
+
+* Install deb-get program
 
     ```bash
     sudo apt install curl lsb-release wget
-    curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+	curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
     ```
 
-3. Move config files
+3.Move config files
 
-- Move config folders to "~/.config" folder.
+* Move config folders to "~/.config" folder.
 
-4. Customizing the setup
+4.Customizing the setup
 
-    ```bash
-    sudo apt install fonts-jetbrains-mono fonts-firacode -y
-    ```
-	
-	- Install ms fonts
-	
-		```bash
-		sudo apt-add-repository contrib non-free -y
-		```
-		
-		```bash
-		sudo apt install ttf-mscorefonts-installer
-		```
+```bash
+sudo apt install fonts-jetbrains-mono -y
+```
   
-- Refresh fonts using
+  * Refresh fonts using
 
-    ```bash
+	```bash
     fc-cache -fv
     ```
 
-5. Install basic set of applications like: ranger, kitty, neofetch, gimp, chromium, obs-studio, neovim, zsh, python tk and pip, sqlite3, emacs and dependancies, thunderbird, timeshift, gnome disk utility, ktorrent, solaar, vlc, htop, btop, onlyoffice, zoom, celmentine music player, obsidian, brave browser, codium (FOSS version of vs code), yakuake terminal
+Install basic set of applications
 
-    ```bash
-    sudo apt install bash-completion ranger kitty neofetch gimp chromium obs-studio vim neovim zsh fwupd python3 python3-tk python3-pip sqlite3 emacs cmake libtool nodejs npm ripgrep thunderbird timeshift gnome-disk-utility ktorrent solaar vlc clementine htop btop yakuake -y
-    ```
+ ```bash
+ sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc htop btop nodejs npm -y
+ ```
 
-    <!-- Install onlyoffice from deb-get -->
-    ```bash
-    deb-get install onlyoffice-desktopeditors zoom obsidian codium
-    ```
-
-- Install spotify-client using [this](https://www.spotify.com/us/download/linux/)
+<!-- Install programs from deb-get -->
+```bash
+deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
+```
   
-* ***Change defaults to relevent programs***
+* ***Change defaults to relevant programs***
 
 ## Other stuff
 
@@ -123,13 +108,13 @@
 
 * add zsh-autosuggestions
 
-  - Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
 
       ```bash
       git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
       ```
 
-  - Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
       ```bash
       plugins=( 
@@ -138,17 +123,17 @@
       )
       ```
 
-  - Start a new terminal session.
+3. Start a new terminal session.
 
 * add zsh-syntax-highlighting (optional)
 
-  - Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
       ```bash
       git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
       ```
 
-  - Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
       ```bash
       plugins=( 
@@ -159,44 +144,39 @@
 
 * copy nvm setting from .bashrc file to .zshrc
 
-~~### Install visual studio code, spotify and brave browser with deb-get~~
-
-  ```bash
-  deb-get install code
-  ```
-
 * Generate ssh key for github
 
-  ```bash
-  # Generate a new ssh key
-  ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
+	```bash
+	# Generate a new ssh key
+	  ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
+	
+	  # Add ssh key to ssh-agent
+	  eval "$(ssh-agent -s)"
+	  ssh-add ~/.ssh/id_ed25519
+	
+	  # Print ssh public key to clipboard
+	  cat ~/.ssh/id_ed25519.pub
+	  ```
 
-  # Add ssh key to ssh-agent
-  eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/id_ed25519
-
-  # Print ssh public key to clipboard
-  cat ~/.ssh/id_ed25519.pub
-  ```
-
-* Install python, sqlite
+* Install python, sqlite (done on a previous step)
 
   ```bash
   sudo apt install python3 python3-tk python3-pip sqlite3 -y
   ```
   
-* Install nvm(Node version manager)
+  * Install nvm(Node version manager)
+
+	```bash
+	  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+	  ```
+
+* Install nodemon and json-server using nodejs
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
+  npm install -g nodemon json-server # or using yarn: yarn global add nodemon
   ```
 
-* Install nodemon and json-server for nodejs
-
-  ```bash
-  npm install -g nodemon json-server
-  ```
-
+* ***Note***
 * Install Miniconda
 
   ```bash
@@ -212,66 +192,58 @@
     ```bash
     conda config --set auto_activate_base false
     ```
-  
-* Optional
+	
+	* Optional
 
-    ```bash
-    bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-    ~/miniconda3/bin/conda init bash
-    ```
-
-* Install the Latest selenium webdriver to Miniconda base environment
-  
-* Download the gecko driver and move it to /usr/local/bin
-
-<!-- ~~* Install micromamba~~ -->
-
-<!--   ```bash -->
-<!--   "${SHELL}" <(curl -L micro.mamba.pm/install.sh) -->
-<!--   ``` -->
-
-<!-- * **Respond to all the input prompts** -->
+		```bash
+		  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+		  ~/miniconda3/bin/conda init bash
+		  ```
 
 * Install the Latest selenium webdriver to Miniconda base environment
-  
 * Download the gecko driver and move it to /usr/local/bin
 
 ### Neovim stuff
 
 * Move neovim config file to $HOME/.config/
 
-  ```bash
-  sudo cp -r .config/neovim/ ~/.config/
-  ```
+### Emacs
 
-* Install pyright from npm
+* Move Emacs config file to $HOME/.config/
 
-  ```bash
-  npm i -g pyright
-  ```
-
-* Install tree-sitte-cli
+* Install emacs
 
   ```bash
-  npm i -g tree-sitter-cli
+  sudo apt install emacs
   ```
 
-* ~~Install ripgrep~~
-
+* Install nerd-icons with following command M-x (alt-x) C-y to paste
   ```bash
-  sudo apt install ripgrep -y
+  nerd-icons-install-fonts
   ```
 
-### Emacs stuff
+* Install python-lsp
 
-* **In order to make bash-ls, ts-ls, html-ls, css-ls work install nodejs and npm system wide using 'apt'**
+  	```bash
+	sudo apt install python3-pylsp
+	```
+
+* Install clangd
+
+	```bash
+	sudo apt install clangd
+	```
+
+### Custom tweaks
+
+* Install ufw virt-manage and thunderbird
+
+	```bash
+	sudo apt install virt-manager thunderbird
+	```
 	
-* Install Python language server
+	* Enable ufw firewall from cli or gui
 
-  ``` bash
-  sudo apt install python3-pylsp -y
-  ```
+### Install MongoDB
 
-* Install MongoDB
-  
-  * [Visit the website for instructions](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+* [Visit the website for instructions](https://www.mongodb.com/docs/manual/administration/install-community/?linux-distribution=debian&linux-package=default&operating-system=linux&search-linux=with-search-linux)

@@ -124,8 +124,9 @@ unset __conda_setup
 # command to wish facebook birthdays
 alias gs="git status"
 alias install="sudo apt install"
-alias update="sudo apt update && sudo apt upgrade"
+alias update="sudo apt update"
+alias upgrade="sudo apt update && sudo apt upgrade"
 alias search="apt search"
 alias remove="sudo apt remove"
 alias autoremove="sudo apt autoremove"
-
+alias purge="sudo apt purge"
