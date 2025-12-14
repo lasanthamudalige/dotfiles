@@ -217,22 +217,22 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
   sudo apt install emacs
   ```
 
-* Install nerd-icons with following command M-x (alt-x) C-y to paste
-  ```bash
-  nerd-icons-install-fonts
-  ```
-
-* Install python-lsp
-
-  	```bash
-	sudo apt install python3-pylsp
-	```
-
-* Install clangd
-
-	```bash
-	sudo apt install clangd
-	```
+	* Install nerd-icons with following command M-x (alt-x) C-y to paste
+	  ```bash
+	  nerd-icons-install-fonts
+	  ```
+	
+	* Install python-lsp
+	
+	  	```bash
+		sudo apt install python3-pylsp
+		```
+	
+	* Install clangd
+	
+		```bash
+		sudo apt install clangd
+		```
 
 ### Custom tweaks
 
