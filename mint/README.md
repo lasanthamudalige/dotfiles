@@ -233,6 +233,7 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 		```bash
 		sudo apt install clangd
 		```
+
   	* Install rust using this [link](https://rust-lang.org/tools/install/)
 
 		* Install rust analyzer using rustup [more information](https://rust-analyzer.github.io/book/rust_analyzer_binary.html)
@@ -241,12 +242,29 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 	  		rustup component add rust-analyzer
 			```
 
-
 ### Custom tweaks
 
 * Enable ufw from cli or gui
 
 * Setup fingerprint using fingwit
+
+	* Allow port 5331 in ufw for localsend
+
+   		```bash
+		sudo ufw allow 5331
+     	```
+
+   		* Show firewall status as numbered using:
+
+       		```bash
+			sudo ufw status numbered
+         	```
+        
+		* Remove the IPv6 rule
+
+			```bash
+			sudo udw delete NUM # 2,3
+   			```
 
 * Install previous mint-backgrounds
 
