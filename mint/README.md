@@ -261,7 +261,7 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 		* Remove the IPv6 rule
 
 			```bash
-			sudo udw delete NUM 
+			sudo udw delete NUM # 2,3
    			```
 
 * Install previous mint-backgrounds
