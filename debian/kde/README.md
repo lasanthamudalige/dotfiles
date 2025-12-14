@@ -12,7 +12,7 @@
 	<!-- This is how to properly declare code snippets  -->
 
 	```bash
-	git clone https://github.com/lasanthamudalige/setups
+	git clone https://github.com/lasanthamudalige/dotfiles
 	```
 
 2. Do essential things
@@ -158,7 +158,7 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 	  cat ~/.ssh/id_ed25519.pub
 	  ```
 
-* Install python, sqlite (done on a previous step)
+* ~~Install python, sqlite~~ (done on a previous step)
 
   ```bash
   sudo apt install python3 python3-tk python3-pip sqlite3 -y

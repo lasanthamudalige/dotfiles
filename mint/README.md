@@ -12,7 +12,7 @@
 	<!-- This is how to properly declare code snippets  -->
 
 	```bash
-	git clone https://github.com/lasanthamudalige/setups
+	git clone https://github.com/lasanthamudalige/dotfiles
 	```
 
 2. Do essential things
@@ -158,7 +158,7 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 	  cat ~/.ssh/id_ed25519.pub
 	  ```
 
-* Install python, sqlite
+* ~~Install python, sqlite~~ (done one a previous step)
 
   ```bash
   sudo apt install python3 python3-tk python3-pip sqlite3 -y
@@ -236,6 +236,8 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
 ### Custom tweaks
 
+* Enable ufw from cli or gui
+
 * Install previous mint-backgrounds
 
   ```bash
@@ -246,4 +248,4 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
 ### Install MongoDB
 
-* [Visit the website for instructions](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+* [Visit the website for instructions](https://www.mongodb.com/docs/manual/administration/install-community/?linux-distribution=ubuntu&linux-package=default&operating-system=linux&search-linux=with-search-linux)

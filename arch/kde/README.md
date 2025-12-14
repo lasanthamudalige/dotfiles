@@ -25,7 +25,7 @@
 1. Clone the repo
 
     ```bash
-    git clone https://github.com/lasanthamudalige/setups
+    git clone https://github.com/lasanthamudalige/dotfiles
     ```
 
 2. Do essential things
