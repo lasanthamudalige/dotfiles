@@ -176,7 +176,6 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
   npm install -g nodemon json-server # or using yarn: yarn global add nodemon
   ```
 
-* ***Note***
 * Install Miniconda
 
   ```bash
