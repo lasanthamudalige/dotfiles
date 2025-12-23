@@ -67,7 +67,7 @@ sudo apt install fonts-jetbrains-mono -y
 Install basic set of applications
 
  ```bash
- sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc elisa htop btop nodejs npm -y
+ sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc elisa htop btop ktorrent nodejs npm -y
  ```
 
 <!-- Install programs from deb-get -->
