@@ -9,11 +9,11 @@
 
 1. Clone the repo
 
-	<!-- This is how to properly declare code snippets  -->
+    <!-- This is how to properly declare code snippets  -->
 
-	```bash
-	git clone https://github.com/lasanthamudalige/dotfiles
-	```
+    ```bash
+    git clone https://github.com/lasanthamudalige/dotfiles
+    ```
 
 2. Do essential things
 
@@ -45,7 +45,8 @@
 
     ```bash
     sudo apt install curl lsb-release wget
-	curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+    curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get 
+    | sudo -E bash -s install deb-get
     ```
 
 3.Move config files
@@ -58,9 +59,9 @@
 sudo apt install fonts-jetbrains-mono -y
 ```
   
-  * Refresh fonts using
+* Refresh fonts using
 
-	```bash
+    ```bash
     fc-cache -fv
     ```
 
@@ -206,6 +207,24 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
 * Move neovim config file to $HOME/.config/
 
+* Install fd-find
+
+    ```bash
+    sudo apt install fd-find
+    ```
+
+* Install tree-sitter CLI
+
+    ```bash
+    npm install -g tree-sitter-cli
+    ```
+
+* Install markdown lint CLI
+
+    ```bash
+    npm install -g markdownlint-cli
+    ```
+
 ### Emacs
 
 * Move Emacs config file to $HOME/.config/
@@ -290,6 +309,12 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
         sudo apt update
         ``` 
 
+        * Install from backports
+
+            ```bash
+            sudo apt install -t trixie-backports package-name
+            ```
+
     * Add testing repository to debian 13 trixie
 
         ```bash
@@ -308,6 +333,14 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
         ```bash
         sudo apt update
         ```
+
+        * Install from testing (Forky)
+
+            ```bash
+            sudo apt install -t forky package-name
+            ``` 
+
+
 
     * **Enable necessary repositories to get needed program versions (both repositories are disabled by default)**
 				
