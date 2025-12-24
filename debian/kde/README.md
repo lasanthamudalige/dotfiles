@@ -64,7 +64,7 @@
         fc-cache -fv
         ```
 
-    Install basic set of applications
+5. Install basic set of applications
 
      ```bash
      sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc elisa htop btop ktorrent gnome-disk-utility nodejs npm thunderbird -y
@@ -211,7 +211,7 @@
         sudo apt install fd-find
         ```
 
-    * **make sure to install nodejs using NVM**
+    * **make sure to install nodejs using NVM before trying following commands**
 
     * Install tree-sitter CLI
 
@@ -236,16 +236,20 @@
       ```
 
         * Install nerd-icons with following command M-x (alt-x) C-y to paste
+
           ```bash
           nerd-icons-install-fonts
           ```
 
         * Install python-lsp
+
             ```bash
             sudo apt install python3-pylsp
             ```
 
         * Install clangd
+
+            ```bash
             sudo apt install clangd
             ```
 
