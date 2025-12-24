@@ -243,7 +243,7 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
 ### Custom tweaks
 
-* Install ufw virt-manage and thunderbird
+* Install ufw and virt-manage
 
 	```bash
 	sudo apt install ufw virt-manager 
