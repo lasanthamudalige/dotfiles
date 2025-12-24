@@ -17,66 +17,65 @@
 
 2. Do essential things
 
-* Install basic programs
+    * Install basic programs
 
-  ```bash
-  sudo apt install vim -y
-  ```
+      ```bash
+      sudo apt install vim -y
+      ```
 
-* Change charge threshold to 80%(optional)
+    * Change charge threshold to 80%(optional)
 
-  ```bash
-  vim /sys/class/power_supply/BAT0/
-  ```
+      ```bash
+      vim /sys/class/power_supply/BAT0/
+      ```
 
-* Select charge_stop_threshold change it to 80
+    * Select charge_stop_threshold change it to 80
 
-* Install tlp(optional)
+    * Install tlp(optional)
 
-* Install tlp
+    * Install tlp
+
+         ```bash
+         sudo apt install tlp tlp-rdw -y
+         ```
+
+    * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
+
+    * Install deb-get program
+
+        ```bash
+        sudo apt install curl lsb-release wget
+        curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+        ```
+
+3. Move config files
+
+    * Move config folders to "~/.config" folder.
+
+4. Customizing the setup
+
+    ```bash
+    sudo apt install fonts-jetbrains-mono -y
+    ```
+
+    * Refresh fonts using
+
+        ```bash
+        fc-cache -fv
+        ```
+
+    Install basic set of applications
 
      ```bash
-     sudo apt install tlp tlp-rdw -y
+     sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc elisa htop btop ktorrent gnome-disk-utility nodejs npm thunderbird -y
      ```
 
-* Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
-
-* Install deb-get program
-
+    <!-- Install programs from deb-get -->
     ```bash
-    sudo apt install curl lsb-release wget
-    curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get 
-    | sudo -E bash -s install deb-get
+    deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
     ```
 
-3.Move config files
-
-* Move config folders to "~/.config" folder.
-
-4.Customizing the setup
-
-```bash
-sudo apt install fonts-jetbrains-mono -y
-```
-  
-* Refresh fonts using
-
-    ```bash
-    fc-cache -fv
-    ```
-
-Install basic set of applications
-
- ```bash
- sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc elisa htop btop ktorrent gnome-disk-utility nodejs npm thunderbird -y
- ```
-
-<!-- Install programs from deb-get -->
-```bash
-deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
-```
-  
-* ***Change defaults to relevant programs***
+    * ***Change defaults to relevant programs***
 
 ## Other stuff
 
@@ -124,7 +123,7 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
       )
       ```
 
-3. Start a new terminal session.
+3. Start a new terminal session
 
 * add zsh-syntax-highlighting (optional)
 
@@ -147,17 +146,17 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
 * Generate ssh key for github
 
-	```bash
-	# Generate a new ssh key
-	  ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
-	
-	  # Add ssh key to ssh-agent
-	  eval "$(ssh-agent -s)"
-	  ssh-add ~/.ssh/id_ed25519
-	
-	  # Print ssh public key to clipboard
-	  cat ~/.ssh/id_ed25519.pub
-	  ```
+    ```bash
+    # Generate a new ssh key
+    ssh-keygen -t ed25519 -C "lasantha1130@gmail.com" # Add your email here by replacing "lasantha1130@gmail.com"
+
+    # Add ssh key to ssh-agent
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+
+    # Print ssh public key to clipboard
+      cat ~/.ssh/id_ed25519.pub
+    ```
 
 * ~~Install python, sqlite~~ (done on a previous step)
 
@@ -167,9 +166,9 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
   
   * Install nvm(Node version manager)
 
-	```bash
-	  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-	  ```
+    ```bash
+      wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+    ```
 
 * Install nodemon and json-server using nodejs
 
@@ -212,6 +211,8 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
     ```bash
     sudo apt install fd-find
     ```
+
+* **make sure to install nodejs using NVM**
 
 * Install tree-sitter CLI
 
@@ -259,14 +260,13 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
   		rustup component add rust-analyzer
 		```
 
-
 ### Custom tweaks
 
 * Install ufw and virt-manage
 
-	```bash
-	sudo apt install ufw virt-manager 
-	```
+    ```bash
+    sudo apt install ufw virt-manager 
+    ```
 	
 	* Enable ufw firewall from cli or gui
 
@@ -338,14 +338,12 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 
             ```bash
             sudo apt install -t forky package-name
-            ``` 
-
-
+            ```
 
     * **Enable necessary repositories to get needed program versions (both repositories are disabled by default)**
-				
+
 * Enable fingerprint in user settings
-     
+
 ### Install MongoDB
 
 * [Visit the website for instructions](https://www.mongodb.com/docs/manual/administration/install-community/?linux-distribution=debian&linux-package=default&operating-system=linux&search-linux=with-search-linux)
