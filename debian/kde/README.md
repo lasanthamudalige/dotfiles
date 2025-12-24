@@ -191,13 +191,13 @@
     ```bash
     conda config --set auto_activate_base false
     ```
-	
-	* Optional
 
-		```bash
-		  bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-		  ~/miniconda3/bin/conda init bash
-		  ```
+    * Optional
+
+        ```bash
+        bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+        ~/miniconda3/bin/conda init bash
+        ```
 
 * Install the Latest selenium webdriver to Miniconda base environment
 * Download the gecko driver and move it to /usr/local/bin
@@ -236,29 +236,27 @@
   sudo apt install emacs
   ```
 
-	* Install nerd-icons with following command M-x (alt-x) C-y to paste
-	  ```bash
-	  nerd-icons-install-fonts
-	  ```
-	
-	* Install python-lsp
-	
-	  	```bash
-		sudo apt install python3-pylsp
-		```
-	
-	* Install clangd
-	
-		```bash
-		sudo apt install clangd
-		```
-  	* Install rust using this [link](https://rust-lang.org/tools/install/)
+    * Install nerd-icons with following command M-x (alt-x) C-y to paste
+      ```bash
+      nerd-icons-install-fonts
+      ```
 
-	  * Install rust analyzer using rustup [more information](https://rust-analyzer.github.io/book/rust_analyzer_binary.html)
- 		
-		```bash
-  		rustup component add rust-analyzer
-		```
+    * Install python-lsp
+        ```bash
+        sudo apt install python3-pylsp
+        ```
+
+    * Install clangd
+        sudo apt install clangd
+        ```
+
+    * Install rust using this [link](https://rust-lang.org/tools/install/)
+
+      * Install rust analyzer using rustup [more information](https://rust-analyzer.github.io/book/rust_analyzer_binary.html)
+
+        ```bash
+        rustup component add rust-analyzer
+        ```
 
 ### Custom tweaks
 
@@ -267,26 +265,26 @@
     ```bash
     sudo apt install ufw virt-manager 
     ```
-	
-	* Enable ufw firewall from cli or gui
 
-		* Allow port 5331 in ufw for localsend
-	
-	   		```bash
-			sudo ufw allow 53317
-	     	```
-	
-	   		* Show firewall status as numbered using:
-	
-	       		```bash
-				sudo ufw status numbered
-	         	```
-	        
-			* Remove the IPv6 rule
-	
-				```bash
-				sudo ufw delete NUM # 2,3
-	   			```
+    * Enable ufw firewall from cli or gui
+
+        * Allow port 5331 in ufw for localsend
+
+            ```bash
+            sudo ufw allow 53317
+            ```
+
+        * Show firewall status as numbered using:
+
+            ```bash
+            sudo ufw status numbered
+            ```
+
+        * Remove the IPv6 rule
+
+            ```bash
+            sudo ufw delete NUM # 2,3
+            ```
 
 * Add Backports and Testing repositories
 
