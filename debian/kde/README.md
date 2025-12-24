@@ -254,7 +254,7 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 		* Allow port 5331 in ufw for localsend
 	
 	   		```bash
-			sudo ufw allow 5331
+			sudo ufw allow 53317
 	     	```
 	
 	   		* Show firewall status as numbered using:
