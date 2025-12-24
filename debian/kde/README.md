@@ -268,6 +268,48 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 				```bash
 				sudo ufw delete NUM # 2,3
 	   			```
+
+* Add Backports and Testing repositories
+
+    * Add backports for debian 13 trixie
+
+        ```bash
+        sudo vim /etc/apt/sources.list.d/debian-backports.sources
+        ```
+
+        ```bash
+        Types: deb deb-src
+        URIs: http://deb.debian.org/debian
+        Suites: trixie-backports
+        Components: main contrib non-free non-free-firmware
+        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+        Enabled: no
+        ```
+
+        ```bash
+        sudo apt update
+        ``` 
+
+    * Add testing repository to debian 13 trixie
+
+        ```bash
+        sudo vim /etc/apt/sources.list.d/debian-testing.sources
+        ```
+
+        ```bash
+        Types: deb deb-src
+        URIs: http://deb.debian.org/debian
+        Suites: forky
+        Components: main contrib non-free non-free-firmware
+        Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+        Enabled: no 
+        ```
+
+        ```bash
+        sudo apt update
+        ```
+
+    * **Enable necessary repositories to get needed program versions (both repositories are disabled by default)**
 				
 * Enable fingerprint in user settings
      
