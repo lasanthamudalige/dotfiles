@@ -87,17 +87,17 @@
     sudo apt install zsh -y
   ```
 
-* List available shells
+    * List available shells
 
-  ```bash
-  chsh -l
-  ```
+      ```bash
+      chsh -l
+      ```
 
-* Change default shell to zsh
+    * Change default shell to zsh
 
-  ```bash
-  chsh -s /usr/bin/zsh # And log back in
-  ```
+      ```bash
+      chsh -s /usr/bin/zsh # And log back in
+      ```
 
 * Install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
 
@@ -106,43 +106,42 @@
   sh install.sh
   ```
 
-* add zsh-autosuggestions
+    * add zsh-autosuggestions
 
-1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+    1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
 
-      ```bash
-      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-      ```
+          ```bash
+          git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+          ```
 
-2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+    2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
-      ```bash
-      plugins=( 
-      # other plugins...
-      zsh-autosuggestions
-      )
-      ```
+          ```bash
+          plugins=( 
+          # other plugins...
+          zsh-autosuggestions
+          )
+          ```
 
-3. Start a new terminal session
+    3. Start a new terminal session
 
-* add zsh-syntax-highlighting (optional)
+    * add zsh-syntax-highlighting (optional)
 
-1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+    1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
-      ```bash
-      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-      ```
+          ```bash
+          git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+          ```
 
-2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+    2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
 
-      ```bash
-      plugins=( 
-      # other plugins...
-      zsh-syntax-highlighting 
-      )
-      ```
+          ```bash
+          plugins=( 
+          # other plugins...
+          zsh-syntax-highlighting 
+          )
+          ```
 
-* copy nvm setting from .bashrc file to .zshrc
 
 * Generate ssh key for github
 
@@ -206,57 +205,57 @@
 
 * Move neovim config file to $HOME/.config/
 
-* Install fd-find
+    * Install fd-find
 
-    ```bash
-    sudo apt install fd-find
-    ```
+        ```bash
+        sudo apt install fd-find
+        ```
 
-* **make sure to install nodejs using NVM**
+    * **make sure to install nodejs using NVM**
 
-* Install tree-sitter CLI
+    * Install tree-sitter CLI
 
-    ```bash
-    npm install -g tree-sitter-cli
-    ```
+        ```bash
+        npm install -g tree-sitter-cli
+        ```
 
-* Install markdown lint CLI
+    * Install markdown lint CLI
 
-    ```bash
-    npm install -g markdownlint-cli
-    ```
+        ```bash
+        npm install -g markdownlint-cli
+        ```
 
 ### Emacs
 
 * Move Emacs config file to $HOME/.config/
 
-* Install emacs
+    * Install emacs
 
-  ```bash
-  sudo apt install emacs
-  ```
-
-    * Install nerd-icons with following command M-x (alt-x) C-y to paste
       ```bash
-      nerd-icons-install-fonts
+      sudo apt install emacs
       ```
 
-    * Install python-lsp
-        ```bash
-        sudo apt install python3-pylsp
-        ```
+        * Install nerd-icons with following command M-x (alt-x) C-y to paste
+          ```bash
+          nerd-icons-install-fonts
+          ```
 
-    * Install clangd
-        sudo apt install clangd
-        ```
+        * Install python-lsp
+            ```bash
+            sudo apt install python3-pylsp
+            ```
 
-    * Install rust using this [link](https://rust-lang.org/tools/install/)
+        * Install clangd
+            sudo apt install clangd
+            ```
 
-      * Install rust analyzer using rustup [more information](https://rust-analyzer.github.io/book/rust_analyzer_binary.html)
+        * Install rust using this [link](https://rust-lang.org/tools/install/)
 
-        ```bash
-        rustup component add rust-analyzer
-        ```
+          * Install rust analyzer using rustup [more information](https://rust-analyzer.github.io/book/rust_analyzer_binary.html)
+
+            ```bash
+            rustup component add rust-analyzer
+            ```
 
 ### Custom tweaks
 
@@ -305,7 +304,7 @@
 
         ```bash
         sudo apt update
-        ``` 
+        ```
 
         * Install from backports
 
