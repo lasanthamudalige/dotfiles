@@ -67,7 +67,7 @@ sudo apt install fonts-jetbrains-mono -y
 Install basic set of applications
 
  ```bash
- sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc elisa htop btop ktorrent gnome-disk-utility nodejs npm -y
+ sudo apt install ranger kitty gimp chromium obs-studio neovim zsh fwupd python3 python3-tk python3-pip sqlite3 cmake libtool ripgrep vlc elisa htop btop ktorrent gnome-disk-utility nodejs npm thunderbird -y
  ```
 
 <!-- Install programs from deb-get -->
@@ -246,7 +246,7 @@ deb-get install onlyoffice-desktopeditors zoom obsidian localsend codium
 * Install ufw virt-manage and thunderbird
 
 	```bash
-	sudo apt install virt-manager thunderbird
+	sudo apt install ufw virt-manager 
 	```
 	
 	* Enable ufw firewall from cli or gui
