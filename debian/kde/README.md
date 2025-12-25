@@ -277,19 +277,21 @@
 
     * Enable ufw firewall from cli or gui
 
-        * Allow port 5331 in ufw for localsend
+        * **Run setup_ufw script**
+
+        * ~~Allow port 5331 in ufw for localsend~~
 
             ```bash
             sudo ufw allow 53317
             ```
 
-        * Show firewall status as numbered using:
+        * ~~Show firewall status as numbered using:~~
 
             ```bash
             sudo ufw status numbered
             ```
 
-        * Remove the IPv6 rule
+        * ~~Remove the IPv6 rule~~
 
             ```bash
             sudo ufw delete NUM # 2,3
