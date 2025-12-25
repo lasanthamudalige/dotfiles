@@ -30,107 +30,107 @@
 
 2. Do essential things
   
-  * Setup bluetooth
-  
-    * Install bluetooth
+    * Setup bluetooth
+    
+      * Install bluetooth
+    
+          ```bash
+          sudo pacman -S bluez bluez-utils
+          ```
+    
+        * Enable and start bluetooth
+    
+          ```bash
+          sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
+          ```
+    * Change charge threshold to 80%(optional)
   
         ```bash
-        sudo pacman -S bluez bluez-utils
+        vim /sys/class/power_supply/BAT0/
         ```
   
-      * Enable and start bluetooth
+    * Install tlp and enable it
+    
+      * Install tlp
   
-        ```bash
-        sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
-        ```
-  * Change charge threshold to 80%(optional)
-
+       ```bash
+       sudo pacman -S tlp tlp-rdw
+       ```
+  
+      * Enable and start tlp
+  
+       ```bash
+       sudo systemctl enable tlp.service && sudo tlp starte
+       ```
+  
+      * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
+  
+    * Install yay aur helper
+  
       ```bash
-      vim /sys/class/power_supply/BAT0/
+      sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
       ```
-
-  * Install tlp and enable it
   
-    * Install tlp
-
-     ```bash
-     sudo pacman -S tlp tlp-rdw
-     ```
-
-    * Enable and start tlp
-
-     ```bash
-     sudo systemctl enable tlp.service && sudo tlp starte
-     ```
-
-    * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
-
-  * Install yay aur helper
-
-    ```bash
-    sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-    ```
-
-* Change pacman configuration
+  * Change pacman configuration
+    
+    * Open the config file
   
-  * Open the config file
-
-      ```bash
-      sudo vim /etc/pacman.conf
-      ```
-
-    * ***Uncomment "#Color" to change the black and white terminal to a colorful one.***
-    * ***Add "ILoveCandy" below it to change default install progress bar.***
-
-    * ***Save the file.***  
-
-  * ~~Show password feedback in terminal (in asterisks)~~
-
-    * Add this line to /etc/sudoers
-
         ```bash
-        Defaults        env_reset
-        Defaults        pwfeedback
+        sudo vim /etc/pacman.conf
         ```
-
-  * ~~Activate the paccache timer to clean package cache~~
-
-      ```bash
-      sudo systemctl enable paccache.timer
-      ```
-
-  * ~~Run xdg-user-dirs to create directories~~
-
-      ```bash
-      xdg-user-dirs-update
-      ```
-
-  * Setup firewall
-
-    * Install UFW
-
-         ```bash
-         sudo pacman -S ufw
-         ```
-    * Run setup_ufw script
-
-    * ~~Enable UFW~~
-
-         ```bash
-        sudo ufw enable
-        ```
-
-    * ~~To check status~~
-
+  
+      * ***Uncomment "#Color" to change the black and white terminal to a colorful one.***
+      * ***Add "ILoveCandy" below it to change default install progress bar.***
+  
+      * ***Save the file.***  
+  
+    * ~~Show password feedback in terminal (in asterisks)~~
+  
+      * Add this line to /etc/sudoers
+  
+          ```bash
+          Defaults        env_reset
+          Defaults        pwfeedback
+          ```
+  
+    * ~~Activate the paccache timer to clean package cache~~
+  
         ```bash
-        sudo ufw status verbose
+        sudo systemctl enable paccache.timer
         ```
-
-    * ~~To auto start with the system~~
-
+  
+    * ~~Run xdg-user-dirs to create directories~~
+  
         ```bash
-        sudo systemctl enable ufw.service
+        xdg-user-dirs-update
         ```
+  
+    * Setup firewall
+  
+      * Install UFW
+  
+           ```bash
+           sudo pacman -S ufw
+           ```
+      * Run setup_ufw script
+  
+      * ~~Enable UFW~~
+  
+           ```bash
+          sudo ufw enable
+          ```
+  
+      * ~~To check status~~
+  
+          ```bash
+          sudo ufw status verbose
+          ```
+  
+      * ~~To auto start with the system~~
+  
+          ```bash
+          sudo systemctl enable ufw.service
+          ```
 
 3. Move config files
 
@@ -151,9 +151,7 @@
 5. Install basic set of applications
 
    ```bash
-   sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python sqlite vim neovim flatpak ttf-jetbrains-mono-nerd
-   ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld       okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils solaar ripgrep fd cmake
-   man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake htop btop gnome-disk-utility partitionmanager           chromium awesome-terminal-fonts ttf-font-awesome francis --needed 
+   sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis --needed 
    ```
 
    <!-- Install packages from AUR -->
