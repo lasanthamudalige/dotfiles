@@ -300,7 +300,7 @@
     * Install lua
 
         ```bash
-        sudo apt install lua --needed
+        sudo pacman -S lua --needed
         ```
 
     * Install fd-find
