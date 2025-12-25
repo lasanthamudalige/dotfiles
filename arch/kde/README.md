@@ -378,7 +378,7 @@
     mongod --version
     ```
 
-### ~~LocalSend setup~~
+### LocalSend setup
 
 **Run setup_ufw script**
 
