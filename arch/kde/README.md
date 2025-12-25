@@ -53,17 +53,17 @@
   
     * Install tlp and enable it
 
-      * Install tlp
+      * ~~Install tlp~~
   
-       ```bash
-       sudo pacman -S tlp tlp-rdw
-       ```
+         ```bash
+         sudo pacman -S tlp tlp-rdw
+         ```
   
-      * Enable and start tlp
+      * ~~Enable and start tlp~~
   
-       ```bash
-       sudo systemctl enable tlp.service && sudo tlp starte
-       ```
+         ```bash
+         sudo systemctl enable tlp.service && sudo tlp starte
+         ```
   
       * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
   
