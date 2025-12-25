@@ -313,7 +313,7 @@
         * Install from backports
 
             ```bash
-            sudo apt install -t trixie-backports package-name
+            sudo apt install package-name/trixie-backports
             ```
 
     * Add testing repository to debian 13 trixie
@@ -338,7 +338,7 @@
         * Install from testing (Forky)
 
             ```bash
-            sudo apt install -t forky package-name
+            sudo apt install package-name/forky
             ```
 
     * **Enable necessary repositories to get needed program versions (both repositories are disabled by default)**
