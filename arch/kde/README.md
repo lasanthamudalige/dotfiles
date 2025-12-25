@@ -107,34 +107,31 @@
          ```bash
          sudo pacman -S ufw
          ```
+    * Run setup_ufw script
 
-    * Enable UFW
+    * ~~Enable UFW~~
 
          ```bash
         sudo ufw enable
         ```
 
-    * To check status
+    * ~~To check status~~
 
         ```bash
         sudo ufw status verbose
         ```
 
-    * To auto start with the system
+    * ~~To auto start with the system~~
 
         ```bash
         sudo systemctl enable ufw.service
         ```
 
-3.Move config files
+3. Move config files
 
 * Move config folders to "~/.config" folder.
-
-  ```bash
-  cp -r emacs/ kitty/ nvim/ ranger/ ~/.config/
-  ```
   
-4.Customizing setup
+4. Customizing setup
 
   <!--- ```bash
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
@@ -146,10 +143,12 @@
     fc-cache -fv
     ```
 
-5.Install basic set of applications
+5. Install basic set of applications
 
- ```bash
-   sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python go tk python-pip sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils solaar ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis --needed 
+   ```bash
+   sudo pacman -S ufw bash-completion wl-clipboard wl-clip-persist speech-dispatcher fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python sqlite vim neovim flatpak ttf-jetbrains-mono-nerd
+   ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska audacious thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kamoso kimageformats qt6-imageformats kcalc ktorrent meld       okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils solaar ripgrep fd cmake
+   man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm yakuake htop btop gnome-disk-utility partitionmanager           chromium awesome-terminal-fonts ttf-font-awesome francis --needed 
    ```
 
    <!-- Install packages from AUR -->
@@ -186,59 +185,47 @@
   sh install.sh
   ```
 
-* add zsh-autosuggestions
-
-  1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
-
-      ```bash
-      git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-      ```
-
-  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
-
-      ```bash
-      plugins=( 
-      # other plugins...
-      zsh-autosuggestions
-      )
-      ```
-
-  3. Start a new terminal session.
-
-* add zsh-syntax-highlighting (optional)
-
-  1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
-
-      ```bash
-      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-      ```
-
-  2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
-
-      ```bash
-      plugins=( 
-      # other plugins...
-      zsh-syntax-highlighting 
-      )
-      ```
-
-* copy nvm setting from .bashrc file to .zshrc
+  * add zsh-autosuggestions
+  
+    1. Clone [this](https://github.com/zsh-users/zsh-autosuggestions) repository into $ZSH_CUSTOM/plugins (by default ~/.oh-my-zsh/custom/plugins)
+  
+        ```bash
+        git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+        ```
+  
+    2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+  
+        ```bash
+        plugins=( 
+        # other plugins...
+        zsh-autosuggestions
+        )
+        ```
+  
+    3. Start a new terminal session.
+  
+  * add zsh-syntax-highlighting (optional)
+  
+    1. Clone [this](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+  
+        ```bash
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+        ```
+  
+    2. Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc)
+  
+        ```bash
+        plugins=( 
+        # other plugins...
+        zsh-syntax-highlighting 
+        )
+        ```
 
 ### Install vscodium, postman frm AUR
 
   ```bash
   yay -S vscodium-bin postman-bin
   ```
-
-***More spotify thirdparty players [here](https://wiki.archlinux.org/title/Spotify)***
-
-<!-- * ***To fix visual code code not saving login info install*** -->
-
-<!--   ```bash -->
-<!--   sudo pacman -S gnome-keyring -->
-<!--   ``` -->
-
-<!--   * add a new password for the keyring -->
 
 <!-- ### Setting programming stuff -->
   
@@ -259,7 +246,7 @@
 * Install python, sqlite
 
   ```bash
-  sudo pacman -S python tk python-pip sqlite --needed
+  sudo pacman -S python sqlite --needed
   ```
   
 * Install nvm(Node version manager)
@@ -268,11 +255,11 @@
   wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
   ```
 
-* Install nodemon and json-server for nodejs
-
-  ```bash
-  npm install -g nodemon json-server
-  ```
+  * Install nodemon and json-server for nodejs
+  
+    ```bash
+    npm install -g nodemon json-server
+    ```
 
 * ***Note***
 * Install Miniconda
@@ -298,61 +285,67 @@
   ~/miniconda3/bin/conda init bash
   ```
 
-* ~~Install micromamba (optional)~~
-
-  <!-- ```bash
-  "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
-  ``` -->
-
-* **Respond to all the input prompts**
-
-* Install the Latest selenium webdriver to Miniconda base environment
-  
-* Download the gecko driver or chrome driver and move it to /usr/local/bin
-
 * **Make sure to install nodejs and npm as a system package for neovim and emacs**
 
 ### Neovim stuff
 
-* Move neovim config file to $HOME/.config/
+* Copy neovim config file to $HOME/.config/
 
-  ```bash
-  sudo cp -r .config/neovim/ ~/.config/
-  ```
+    * Install lua
 
-* ~~Install ripgrep~~
+        ```bash
+        sudo apt install lua --needed
+        ```
 
-  ```bash
-  sudo pacman -S ripgrep --needed
-  ```
+    * Install fd-find
+
+        ```bash
+        sudo pacman -S fd --needed
+        ```
+
+    * **make sure to install nodejs using NVM before trying following commands**
+
+    * Install tree-sitter CLI and markdown lint CLI
+
+        ```bash
+        npm install -g tree-sitter-cli markdownlint-cli
+        ```
+
+    * ~~Install ripgrep~~
+    
+      ```bash
+      sudo pacman -S ripgrep --needed
+      ```
 
 ### Emacs stuff
 
-* Customize emacs
+* Copy Emacs config file to $HOME/.config/
 
-  * Change hl-mode background color (if defaults doesn't change the color)
+    * Install emacs
 
-    ```bash
-    M-x customize-face RET hl-lie RET
-    ```
+      ```bash
+      sudo pacman -S emacs --needed
+      ```
 
-    * Click on the link:
+        * Install nerd-icons with following command M-x (alt-x) C-y to paste
 
-     <img src="https://github.com/user-attachments/assets/15b5a65e-42fb-42b6-affb-aaac8876f448" width="75%"/>
+          ```bash
+          nerd-icons-install-fonts
+          ```
+          
+        * Install python-lsp and clangd
 
-    * Change background value to "#3e4446" and click Apply and Save:
+            ```bash
+            sudo pacman -S python-lsp-server clang --needed
+            ```
 
-     <img src="https://github.com/user-attachments/assets/84aca960-4972-4df5-9610-3b8373742b8b" width="75%"/>
+        * Install rust using this [link](https://rust-lang.org/tools/install/)
 
-    * Press "q" twice to close both this and previous window to quit.
+          * Install rust analyzer using rustup [more information](https://rust-analyzer.github.io/book/rust_analyzer_binary.html)
 
-* Install language servers
-
-  * Using pacman
-
-     ```bash
-            sudo pacman -S python-lsp-server --needed
-     ```
+            ```bash
+            rustup component add rust-analyzer
+            ```
 
 ### MongoDB
 
@@ -382,18 +375,28 @@
     mongod --version
     ```
 
-### LocalSend setup
+### ~~LocalSend setup~~
 
-1. Add a new rule to the firewall
-2. Direction: incoming
-3. Destination: Any ip, port: 53317
-4. Press create
+**Run setup_ufw script**
 
-* Other programs
+* ~~Enable ufw firewall from cli~~
 
-  ```bash
-  yay -S termdown # commandline countdown program
-  yay -S devtodo # commandline todo list
-  sudo pacman -S calc # commandline calculator
-  sudo pacman -S ncspot # commandline spotify program
-  ```
+  * **Run setup_ufw script**
+
+    * ~~Allow port 5331 in ufw for localsend~~
+
+      ```bash
+      sudo ufw allow 53317
+      ```
+
+    * ~~Show firewall status as numbered using:~~
+
+      ```bash
+      sudo ufw status numbered
+      ```
+
+    * ~~Remove the IPv6 rule~~
+
+      ```bash
+      sudo ufw delete NUM # 2,3
+      ```
