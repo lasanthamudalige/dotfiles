@@ -33,13 +33,13 @@
   
     * ~~Setup bluetooth~~
 
-      * Install bluetooth
+      * ~~Install bluetooth~~
 
           ```bash
           sudo pacman -S bluez bluez-utils
           ```
 
-        * Enable and start bluetooth
+        * ~~Enable and start bluetooth~~
 
           ```bash
           sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
