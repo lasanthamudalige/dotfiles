@@ -204,6 +204,12 @@
 ### Neovim stuff
 
 * Move neovim config file to $HOME/.config/
+    
+    * Install lua 5.1
+
+        ```bash
+        sudo apt install lua5.1
+        ```
 
     * Install fd-find
 
