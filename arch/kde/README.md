@@ -45,7 +45,7 @@
           sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
           ```
 
-    * Change charge threshold to 80%(optional)
+    * Change charge threshold to 80% (optional)
   
         ```bash
         vim /sys/class/power_supply/BAT0/
