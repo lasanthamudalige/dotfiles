@@ -219,16 +219,10 @@
 
     * **make sure to install nodejs using NVM before trying following commands**
 
-    * Install tree-sitter CLI
+    * Install tree-sitter CLI and markdown lint CLI
 
         ```bash
-        npm install -g tree-sitter-cli
-        ```
-
-    * Install markdown lint CLI
-
-        ```bash
-        npm install -g markdownlint-cli
+        npm install -g tree-sitter-cli markdownlint-cli
         ```
 
 ### Emacs
@@ -247,16 +241,10 @@
           nerd-icons-install-fonts
           ```
 
-        * Install python-lsp
+        * Install python-lsp and clangd
 
             ```bash
-            sudo apt install python3-pylsp
-            ```
-
-        * Install clangd
-
-            ```bash
-            sudo apt install clangd
+            sudo apt install python3-pylsp clangd
             ```
 
         * Install rust using this [link](https://rust-lang.org/tools/install/)
