@@ -159,21 +159,21 @@
 
 * ~~Install python, sqlite~~ (done on a previous step)
 
-  ```bash
-  sudo apt install python3 python3-tk python3-pip sqlite3 -y
-  ```
+    ```bash
+    sudo apt install python3 python3-tk python3-pip sqlite3 -y
+    ```
   
-  * Install nvm(Node version manager)
+* Install nvm(Node version manager)
 
     ```bash
       wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
     ```
 
-* Install nodemon and json-server using nodejs
+    * Install nodemon and json-server using nodejs
 
-  ```bash
-  npm install -g nodemon json-server # or using yarn: yarn global add nodemon
-  ```
+      ```bash
+      npm install -g nodemon json-server # or using yarn: yarn global add nodemon
+      ```
 
 * Install Miniconda
 
