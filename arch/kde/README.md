@@ -29,19 +29,24 @@
     ```
 
 2. Do essential things
-
-* Setup bluetooth
-
-  * Install bluetooth
+  
+  * Setup bluetooth
+  
+    * Install bluetooth
+  
+        ```bash
+        sudo pacman -S bluez bluez-utils
+        ```
+  
+      * Enable and start bluetooth
+  
+        ```bash
+        sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
+        ```
+  * Change charge threshold to 80%(optional)
 
       ```bash
-      sudo pacman -S bluez bluez-utils
-      ```
-
-    * Enable and start bluetooth
-
-      ```bash
-      sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
+      vim /sys/class/power_supply/BAT0/
       ```
 
   * Install tlp and enable it
