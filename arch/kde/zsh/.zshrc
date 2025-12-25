@@ -121,6 +121,10 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Custom commands
-# command to wish facebook birthdays
 alias gs="git status"
-
+alias install="sudo pacman -S"
+alias update="sudo pacman -Sy"
+alias upgrade="sudo pacman -Syu"
+alias search="pacman -Q"
+alias remove="sudo pacman -R"
+alias purge="sudo pacman -Rns"
