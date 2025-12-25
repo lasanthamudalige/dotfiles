@@ -137,7 +137,7 @@
 
 3. Move config files
 
-* Move config folders to "~/.config" folder.
+    * Move config folders to "~/.config" folder.
   
 4. Customizing setup
 
@@ -145,22 +145,28 @@
   sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
   ``` -->
   
-* Refresh fonts using
+<!--* Refresh fonts using
 
     ```bash
     fc-cache -fv
-    ```
+    ```-->
 
 5. Install basic set of applications
 
-   ```bash
-   sudo pacman -S ufw bash-completion fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kimageformats qt6-imageformats kcalc ktorrent okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis power-profiles-daemon fprint speech-dispatcher --needed 
-   ```
+  ```bash
+  sudo pacman -S ufw bash-completion fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kimageformats qt6-imageformats kcalc ktorrent okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis power-profiles-daemon fprint speech-dispatcher --needed 
+  ```
 
-   <!-- Install packages from AUR -->
-   ```bash
-   yay -S onlyoffice-bin vscodium-bin ttf-ms-fonts localsend-bin zoom
-   ```
+  * Refresh fonts using
+
+  ```bash
+  fc-cache -fv
+  ```
+
+  <!-- Install packages from AUR -->
+  ```bash
+  yay -S onlyoffice-bin vscodium-bin localsend-bin zoom
+  ```
 
 ## Other stuff
 
@@ -172,17 +178,17 @@
   sudo pacman -S zsh zsh-completions --needed
   ```
 
-* List available shells
+    * List available shells
 
-  ```bash
-  chsh -l
-  ```
+      ```bash
+      chsh -l
+      ```
 
-* Change default shell to zsh
+    * Change default shell to zsh
 
-  ```bash
-  chsh -s /usr/bin/zsh # And log back in
-  ```
+      ```bash
+      chsh -s /usr/bin/zsh # And log back in
+      ```
 
 * Install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh)
 
