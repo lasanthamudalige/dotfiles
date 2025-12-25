@@ -121,7 +121,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Custom commands
-# command to wish facebook birthdays
 alias gs="git status"
 alias install="sudo apt install"
 alias update="sudo apt update"
