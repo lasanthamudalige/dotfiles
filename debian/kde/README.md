@@ -291,7 +291,7 @@
 
 * Add Backports and Testing repositories
 
-    * Add backports for debian 13 trixie
+    * Add **backports** for debian 13 trixie
 
         ```bash
         sudo vim /etc/apt/sources.list.d/debian-backports.sources
@@ -316,7 +316,7 @@
             sudo apt install package-name/trixie-backports
             ```
 
-    * Add testing repository to debian 13 trixie
+    * Add **testing** repository to debian 13 trixie
 
         ```bash
         sudo vim /etc/apt/sources.list.d/debian-testing.sources
