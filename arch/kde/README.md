@@ -154,7 +154,7 @@
 5. Install basic set of applications
 
     ```bash
-    sudo pacman -S ufw bash-completion fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python sqlite vim neovim flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kimageformats qt6-imageformats kcalc ktorrent okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis power-profiles-daemon fprint speech-dispatcher --needed 
+    sudo pacman -S ufw bash-completion fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python sqlite vim neovim wl-clipboard flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kimageformats qt6-imageformats kcalc ktorrent okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis power-profiles-daemon fprint speech-dispatcher --needed 
     ```
 
     * Install packages from AUR
@@ -340,8 +340,6 @@
         rustup component add rust-analyzer
         ```
 
-
-
 ### Emacs stuff
 
 * Copy Emacs config file to $HOME/.config/
@@ -372,6 +370,53 @@
             rustup component add rust-analyzer
             ```
 
+### Setup virt-manager
+
+* Install virt-manager + dependencies
+
+    ```bash
+    sudo pacman -S qemu virt-manager libvirt dnsmasq ebtables iptables-nft
+    ```
+* Enable libvirtd package
+
+    ```bash
+    sudo systemctl enable --now libvirtd
+    ```
+
+* Add current user to the libvirt group
+
+    ```bash
+    sudo usermod -aG libvirt $USER
+    ```
+
+* File -> new connection -> Hypervisor: QEMU/KVM -> Press connect
+
+### LocalSend setup
+
+* **Run setup_ufw script**
+
+* ~~Enable ufw firewall from cli~~
+
+  * **Run setup_ufw script**
+
+    * ~~Allow port 5331 in ufw for localsend~~
+
+      ```bash
+      sudo ufw allow 53317
+      ```
+
+    * ~~Show firewall status as numbered using:~~
+
+      ```bash
+      sudo ufw status numbered
+      ```
+
+    * ~~Remove the IPv6 rule~~
+
+      ```bash
+      sudo ufw delete NUM # 2,3
+      ```
+
 ### MongoDB
 
 * Install MongoDB (**check the wiki**)
@@ -400,28 +445,4 @@
     mongod --version
     ```
 
-### LocalSend setup
 
-**Run setup_ufw script**
-
-* ~~Enable ufw firewall from cli~~
-
-  * **Run setup_ufw script**
-
-    * ~~Allow port 5331 in ufw for localsend~~
-
-      ```bash
-      sudo ufw allow 53317
-      ```
-
-    * ~~Show firewall status as numbered using:~~
-
-      ```bash
-      sudo ufw status numbered
-      ```
-
-    * ~~Remove the IPv6 rule~~
-
-      ```bash
-      sudo ufw delete NUM # 2,3
-      ```
