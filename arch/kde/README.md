@@ -275,7 +275,7 @@
     ```bash
     npm install -g nodemon json-server
     ```
-    
+
 * Install Miniconda
 
   ```bash
@@ -326,7 +326,7 @@
         ```
 
     * ~~Install ripgrep~~
-    
+
       ```bash
       sudo pacman -S ripgrep --needed
       ```
@@ -354,7 +354,7 @@
           ```bash
           nerd-icons-install-fonts
           ```
-          
+
         * Install python-lsp and clangd
 
             ```bash
@@ -443,5 +443,3 @@
     ```bash
     mongod --version
     ```
-
-
