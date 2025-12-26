@@ -1,5 +1,6 @@
 dosfstools ntfs-3g exfat-utils (different file system support)
 arj lrzip lzop unarchiver p7zip zip unzip unrar (ark dependencies)
+wl-clipboard (neovim copy/paste utility)
 kdegraphics-thumbnailers ffmpegthumbs (dolphin dependencies)
 kimageformats qt6-imageformats (gwenview dependencies)
 ebook-tools kdegraphics-mobipocket (okular dependencies)
