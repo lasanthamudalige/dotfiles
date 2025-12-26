@@ -317,7 +317,7 @@
         sudo pacman -S fd --needed
         ```
 
-    * **make sure to install nodejs using NVM before trying following commands**
+    * **Make sure to install nodejs using NVM before trying following commands**
 
     * Install tree-sitter CLI and markdown lint CLI
 
