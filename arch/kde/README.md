@@ -275,8 +275,7 @@
     ```bash
     npm install -g nodemon json-server
     ```
-
-* ***Note***
+    
 * Install Miniconda
 
   ```bash
