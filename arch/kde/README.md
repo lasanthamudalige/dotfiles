@@ -14,7 +14,7 @@
 * profile: kde-plasma desktop with login with sddm
 * Bluetooth: Enabled
 * Audio: Pipewire
-* kernel - mainline or lts
+* kernel - mainline or lts (!! install linux-firmware scx-scheds wireless-regdb)
 * Additional packages - firefox git vim
 * Network configuration - NetworkManager
 * Other settings are stock settings
