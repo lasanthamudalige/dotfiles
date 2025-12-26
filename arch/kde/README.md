@@ -369,7 +369,7 @@
             rustup component add rust-analyzer
             ```
 
-### Setup virt-manager
+### Setup Virt-Manager
 
 * Install virt-manager + dependencies
 
@@ -390,7 +390,7 @@
 
 * File -> new connection -> Hypervisor: QEMU/KVM -> Press connect
 
-### LocalSend setup
+### Setup LocalSend
 
 * **Run setup_ufw script**
 
