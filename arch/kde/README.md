@@ -242,7 +242,7 @@
   yay -S vscodium-bin postman-bin
   ```
 
-<!-- ### Setting programming stuff -->
+### Setting programming stuff
   
 * Generate ssh key for github
 
@@ -275,8 +275,7 @@
     ```bash
     npm install -g nodemon json-server
     ```
-
-* ***Note***
+    
 * Install Miniconda
 
   ```bash
@@ -318,7 +317,7 @@
         sudo pacman -S fd --needed
         ```
 
-    * **make sure to install nodejs using NVM before trying following commands**
+    * **Make sure to install nodejs using NVM before trying following commands**
 
     * Install tree-sitter CLI and markdown lint CLI
 
