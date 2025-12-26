@@ -242,7 +242,7 @@
   yay -S vscodium-bin postman-bin
   ```
 
-<!-- ### Setting programming stuff -->
+### Setting programming stuff
   
 * Generate ssh key for github
 
