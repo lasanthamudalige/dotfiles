@@ -10,7 +10,7 @@
 
 ***Install using archinstall with following configurations***
 
-* Disk partition: ext4 with 1 partition with LVM on LUKS
+* Disk partition: ext4 with 1 partition with LVM
 * profile: kde-plasma desktop with login with sddm
 * Bluetooth: Enabled
 * Audio: Pipewire
