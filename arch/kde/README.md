@@ -22,6 +22,10 @@
 ## Using dotfiles
 
 * ***Install firefox, vim and git if not installed***
+
+    ```bash
+    sudo pacman -S firefox vim git
+    ```
   
 1. Clone the repo
 
