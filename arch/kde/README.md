@@ -1,4 +1,4 @@
-# Arch Kde setup
+# Arch KDE setup
 
 ## Table of contents
 
