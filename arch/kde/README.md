@@ -142,7 +142,7 @@
 3. Move config files
 
     * Move config folders to "~/.config" folder.
-  
+
 4. Customizing setup
 
   <!--- ```bash
