@@ -8,7 +8,7 @@
 
 ## Arch install summery
 
-***Install using archinstall with following config***
+***Install using archinstall with following configurations***
 
 * Disk partition: ext4 with 1 partition with LVM on LUKS
 * profile: kde-plasma desktop with login with sddm
