@@ -392,6 +392,10 @@
 
 * File -> new connection -> Hypervisor: QEMU/KVM -> Press connect
 
+* Errors
+
+  * To fix no network error set firewall_backend=iptables in /etc/libvirt/network.conf and restart
+
 ### Setup LocalSend
 
 * **Run setup_ufw script**
