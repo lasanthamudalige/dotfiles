@@ -164,7 +164,7 @@
     * Install packages from AUR
     
       ```bash
-      yay -S onlyoffice-bin vscodium-bin localsend-bin zoom ttf-ms-fonts
+      yay -S onlyoffice-bin vscodium-bin zoom
       ```
   
     * Refresh fonts using
