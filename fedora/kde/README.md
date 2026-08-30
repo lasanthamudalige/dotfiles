@@ -23,9 +23,9 @@
 
     * Move config folders to "~/.config" folder.
 
-3. Customizing setup
+<!--- 3. Customizing setup
 
-  <!--- ```bash
+   ```bash
   sudo dnf install jetbrains-mono-fonts-all.noarch -y 
   ``` -->
   
@@ -35,7 +35,7 @@
     fc-cache -fv
     ```-->
 
-4. Install basic set of applications
+3. Install basic set of applications
 
     ```bash
     sudo dnf install zsh jetbrains-mono-fonts-all.noarch thunderbird vlc ktorrent okular kclock gimp obs-studio npm nodejs htop btop gnome-disk-utility chromium -y
@@ -197,7 +197,7 @@
         rustup component add rust-analyzer
         ```
 
-### Emacs stuff
+<!---### Emacs stuff
 
 * Copy Emacs config file to $HOME/.config/
 
@@ -304,4 +304,4 @@
 
     ```bash
     mongod --version
-    ```
+    ``` -->
