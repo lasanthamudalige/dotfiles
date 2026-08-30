@@ -194,7 +194,7 @@
     * Install lua
 
         ```bash
-        sudo dnf install lua -y
+        sudo dnf install lua golang -y
         ```
 
     * **Make sure to install nodejs using NVM before trying following commands**
