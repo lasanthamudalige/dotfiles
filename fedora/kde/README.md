@@ -38,7 +38,7 @@
 3. Install basic set of applications
 
     ```bash
-    sudo dnf install zsh jetbrains-mono-fonts-all.noarch thunderbird vlc ktorrent okular kclock gimp obs-studio npm nodejs htop btop gnome-disk-utility chromium -y
+    sudo dnf install zsh vim neovim jetbrains-mono-fonts-all.noarch thunderbird vlc ktorrent okular kclock gimp obs-studio npm nodejs htop btop gnome-disk-utility chromium -y
     ```
 
     * Download RPM packages from:
