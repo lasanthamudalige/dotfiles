@@ -191,7 +191,7 @@
 
 * Copy neovim config file to $HOME/.config/
 
-    * Install lua
+    * Install Lua and Go
 
         ```bash
         sudo dnf install lua golang -y
