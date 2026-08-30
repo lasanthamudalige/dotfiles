@@ -122,9 +122,7 @@ unset __conda_setup
 
 # Custom commands
 alias gs="git status"
-alias install="sudo pacman -S"
-alias update="sudo pacman -Sy"
-alias upgrade="sudo pacman -Syu"
-alias search="pacman -Q"
-alias remove="sudo pacman -R"
-alias purge="sudo pacman -Rns"
+alias install="sudo dnf install"
+alias update="sudo dnf update"
+alias search="dnf search"
+alias remove="sudo dnf remove"

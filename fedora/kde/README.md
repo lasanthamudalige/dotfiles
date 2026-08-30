@@ -2,29 +2,15 @@
 
 ## Table of contents
 
-* [Arch install summery](#arch-install-summery)
 * [Using dotfiles](#using-dotfiles)
 * [Other stuff](#other-stuff)
-
-## Arch install summery
-
-***Install using archinstall with following configurations***
-
-* Disk partition: ext4 with 1 partition with LVM
-* profile: kde-plasma desktop with login with sddm
-* Bluetooth: Enabled
-* Audio: Pipewire
-* kernel - mainline or lts (**install linux-firmware scx-scheds wireless-regdb**)
-* Additional packages - firefox git vim
-* Network configuration - NetworkManager
-* Other settings are stock settings
 
 ## Using dotfiles
 
 * ***Install firefox, vim and git if not installed***
 
     ```bash
-    sudo pacman -S firefox vim git
+    sudo dnf install firefox vim git -y
     ```
   
 1. Clone the repo
@@ -33,120 +19,14 @@
     git clone https://github.com/lasanthamudalige/dotfiles
     ```
 
-2. Do essential things
-  
-    * ~~Setup bluetooth~~
-
-      * ~~Install bluetooth~~
-
-          ```bash
-          sudo pacman -S bluez bluez-utils
-          ```
-
-        * ~~Enable and start bluetooth~~
-
-          ```bash
-          sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service
-          ```
-
-    * Change charge threshold to 80% (optional)
-  
-        ```bash
-        vim /sys/class/power_supply/BAT0/
-        ```
-  
-    * ~~Install tlp and enable it~~
-
-      * ~~Install tlp~~
-  
-         ```bash
-         sudo pacman -S tlp tlp-rdw
-         ```
-  
-      * ~~Enable and start tlp~~
-  
-         ```bash
-         sudo systemctl enable tlp.service && sudo tlp starte
-         ```
-  
-      * Copy the file '00-template.conf' in tlp folder to /etc/tlp.d/
-  
-    * Install yay aur helper
-  
-      ```bash
-      sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-      ```
-
-    * Change pacman configuration
-
-      * Open the config file
-
-          ```bash
-          sudo vim /etc/pacman.conf
-          ```
-
-        * ***Uncomment "#Color" to change the black and white terminal to a colorful one.***
-        * ***Add "ILoveCandy" below it to change default install progress bar.***
-
-        * ***Save the file.***  
-
-      * ~~Show password feedback in terminal (in asterisks)~~
-
-        * Add this line to /etc/sudoers
-
-            ```bash
-            Defaults        env_reset
-            Defaults        pwfeedback
-            ```
-
-      * ~~Activate the paccache timer to clean package cache~~
-
-          ```bash
-          sudo systemctl enable paccache.timer
-          ```
-
-      * ~~Run xdg-user-dirs to create directories~~
-
-          ```bash
-          xdg-user-dirs-update
-          ```
-
-      * Setup firewall
-
-        * Install UFW
-
-             ```bash
-             sudo pacman -S ufw
-             ```
-
-        * Run setup_ufw script
-
-        * ~~Enable UFW~~
-
-            ```bash
-            sudo ufw enable
-            ```
-
-        * ~~To check status~~
-
-            ```bash
-            sudo ufw status verbose
-            ```
-
-        * ~~To auto start with the system~~
-
-            ```bash
-            sudo systemctl enable ufw.service
-            ```
-
-3. Move config files
+2. Move config files
 
     * Move config folders to "~/.config" folder.
 
-4. Customizing setup
+3. Customizing setup
 
   <!--- ```bash
-  sudo pacman -S ttf-jetbrains-mono-nerd ttf-fira-code
+  sudo dnf install jetbrains-mono-fonts-all.noarch -y 
   ``` -->
   
 <!--* Refresh fonts using
@@ -155,18 +35,18 @@
     fc-cache -fv
     ```-->
 
-5. Install basic set of applications
+4. Install basic set of applications
 
     ```bash
-    sudo pacman -S ufw bash-completion fwupd dosfstools ntfs-3g exfat-utils arj lrzip lzop unarchiver p7zip zip unzip unrar zsh zsh-completions python sqlite vim vi neovim wl-clipboard flatpak ttf-jetbrains-mono-nerd ttf-firacode-nerd noto-fonts-emoji noto-fonts-cjk timeshift elisa vlc vlc-plugin-ass vlc-plugin-freetype vlc-plugin-matroska thunderbird kdegraphics-thumbnailers ffmpegthumbs gwenview kimageformats qt6-imageformats kcalc ktorrent okular ebook-tools kdegraphics-mobipocket spectacle kcron kclock libreoffice-fresh gimp inkscape python-tinycss2 obsidian obs-studio libfdk-aac libva-mesa-driver luajit python sndio v4l2loopback-dkms v4l2loopback-utils ripgrep fd cmake man-db man-pages kitty ranger atool elinks ffmpegthumbnailer highlight imagemagick libcaca lynx mediainfo odt2txt poppler python-chardet python-pillow transmission-cli ueberzug nodejs npm htop btop gnome-disk-utility partitionmanager chromium awesome-terminal-fonts ttf-font-awesome francis power-profiles-daemon fprint speech-dispatcher --needed 
+    sudo dnf install zsh jetbrains-mono-fonts-all.noarch thunderbird vlc ktorrent okular kclock gimp obs-studio npm nodejs htop btop gnome-disk-utility chromium -y
     ```
 
-    * Install packages from AUR
-    
-      ```bash
-      yay -S onlyoffice-bin vscodium-bin localsend-bin zoom ttf-ms-fonts
-      ```
-  
+    * Download RPM packages from:
+        [OnlyOffice](https://github.com/VSCodium/vscodium/releases)
+        [Zoom](https://www.onlyoffice.com/download-desktop)
+        [VSCodium](https://zoom.us/download?os=linux)
+        [Intellij IDEA](https://www.jetbrains.com/help/idea/installation-guide.html#standalone_linux)
+
     * Refresh fonts using
   
       ```bash
@@ -180,7 +60,7 @@
 * Install zsh shell
 
   ```bash
-  sudo pacman -S zsh zsh-completions --needed
+  sudo dnf install zsh -y
   ```
 
     * List available shells
@@ -238,12 +118,6 @@
         )
         ```
 
-### Install vscodium, postman frm AUR
-
-  ```bash
-  yay -S vscodium-bin postman-bin
-  ```
-
 ### Setting programming stuff
   
 * Generate ssh key for github
@@ -260,16 +134,10 @@
   cat ~/.ssh/id_ed25519.pub
   ```
 
-* Install python, sqlite
-
-  ```bash
-  sudo pacman -S python sqlite --needed
-  ```
-  
 * Install nvm(Node version manager)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash  
+  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
   ```
 
   * Install nodemon and json-server for nodejs
@@ -310,13 +178,7 @@
     * Install lua
 
         ```bash
-        sudo pacman -S lua --needed
-        ```
-
-    * Install fd-find
-
-        ```bash
-        sudo pacman -S fd --needed
+        sudo dnf install lua -y
         ```
 
     * **Make sure to install nodejs using NVM before trying following commands**
@@ -326,12 +188,6 @@
         ```bash
         npm install -g tree-sitter-cli markdownlint-cli
         ```
-
-    * ~~Install ripgrep~~
-
-      ```bash
-      sudo pacman -S ripgrep --needed
-      ```
 
     * Install rust using this [link](https://rust-lang.org/tools/install/)
 
