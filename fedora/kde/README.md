@@ -47,6 +47,21 @@
         [VSCodium](https://zoom.us/download?os=linux)
         [Intellij IDEA](https://www.jetbrains.com/help/idea/installation-guide.html#standalone_linux)
 
+    * Install AppImages:
+      [Obsidian](https://obsidian.md/download)
+
+        * Install [Gear Lever](https://flathub.org/apps/it.mijorus.gearlever)
+
+          ```bash
+          flatpak install it.mijorus.gearlever
+          ```
+
+    * Remove preinstalled apps
+      
+      ```bash
+      sudo dnf remove kmail kdeconnectd kamoso dragon qrca kmines kpat kmahjongg kaddressbook korganizer neochat krfb krdc kolourpaint akregator
+      ```
+
     * Refresh fonts using
   
       ```bash
