@@ -49,6 +49,7 @@
 
     * Install AppImages:
       [Obsidian](https://obsidian.md/download)
+      [LocalSend](https://localsend.org/download)
 
         * Install [Gear Lever](https://flathub.org/apps/it.mijorus.gearlever)
 
