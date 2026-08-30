@@ -213,6 +213,8 @@
         rustup component add rust-analyzer
         ```
 
+### To install Java refer to [fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/installing-java/)
+
 <!---### Emacs stuff
 
 * Copy Emacs config file to $HOME/.config/
