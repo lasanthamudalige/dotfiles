@@ -42,9 +42,9 @@
     ```
 
     * Download RPM packages from:
-        [OnlyOffice](https://github.com/VSCodium/vscodium/releases)
-        [Zoom](https://www.onlyoffice.com/download-desktop)
-        [VSCodium](https://zoom.us/download?os=linux)
+        [OnlyOffice](https://www.onlyoffice.com/download-desktop)
+        [Zoom](https://zoom.us/download?os=linux)
+        [VSCodium](https://github.com/VSCodium/vscodium/releases)
         [Intellij IDEA](https://www.jetbrains.com/help/idea/installation-guide.html#standalone_linux)
 
     * Install AppImages:
