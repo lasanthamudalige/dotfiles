@@ -35,7 +35,14 @@
     fc-cache -fv
     ```-->
 
-3. Install basic set of applications
+3. Change DNF config file (Add under the [main] section)
+   ```bash
+   max_parallel_downloads=2
+   defaultyes=True
+   keepcache=True
+   ```
+
+4. Install basic set of applications
 
     ```bash
     sudo dnf install zsh vim neovim jetbrains-mono-fonts-all.noarch thunderbird vlc ktorrent okular kclock gimp obs-studio npm nodejs htop btop gnome-disk-utility chromium -y
