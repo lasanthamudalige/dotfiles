@@ -201,7 +201,7 @@
     * Install Lua and Go
 
         ```bash
-        sudo dnf install fd lua luarocks golang -y
+        sudo dnf install fd lua luarocks golang cascadia-mono-nf-fonts.noarch -y
         ```
 
     * **Make sure to install nodejs using NVM before trying following commands**
