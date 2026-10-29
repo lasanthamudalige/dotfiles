@@ -38,6 +38,7 @@
 3. Change DNF config file (Add under the [main] section)
    ```bash
    max_parallel_downloads=2
+   fastestmirror=True
    defaultyes=True
    keepcache=True
    ```
